@@ -45,3 +45,387 @@
 	border-radius:.25em;
   
 }
+
+
+/* Override some defaults */
+html, body {
+  background-color: #eee;
+}
+.navbar {
+  margin-bottom: 0;
+}
+.navbar .container{ 
+  width:940px;
+}
+.container > footer {
+  margin-top: 20px;
+}
+.container > footer p {
+  text-align: center; /* center align it with the container */
+}
+
+/* The white background content wrapper */
+.content {
+  background-color: #fff;
+  padding: 20px;
+  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+          box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+/* Page header tweaks */
+.page-header {
+  background-color: #f5f5f5;
+  padding: 20px 20px 10px;
+  margin: -20px -20px 20px;
+}
+
+/* posts index */
+.post > h3.title {
+  position:relative;
+  padding-top:10px;
+  border-top:3px solid #eee;
+}
+.post > h3.title span.date { 
+  position:absolute;
+  right:0;
+  font-size:0.9em;
+}
+.post > .more {
+  margin:10px 0;
+  text-align:left;
+}
+
+/* tag_box ======================================================== */
+
+.tag_box {
+  list-style:none;
+  margin:0;
+  padding:5px 0 ;
+  overflow:hidden;
+}
+.tag_box li {
+  line-height:28px;
+}
+.tag_box.inline li {
+  float:left;
+}
+.tag_box a {
+  padding: 3px 6px;
+  margin: 2px;
+  background: #eee;
+  color:#005F6B;
+  border-radius: 3px;
+  text-decoration:none;
+}
+.tag_box a span{
+  vertical-align:super;
+  font-size:0.8em;
+}
+.tag_box a.active {
+  background:#57A957;
+  border:1px solid #4C964D;
+  color:#FFF;
+}
+
+
+
+/*****      + + + + + + +      ***** /
+
+
+/* Global */
+html, body {height:100%; font-family:'OpenSansRegular', Helvetica, Arial, sans-serif;}
+body {overflow-x:auto; overflow-y:scroll;}
+.clear {clear:both;}
+.clearfix:after {clear: both; content: "."; display:block; font-size:0; visibility:hidden;}
+.layout {max-width:960px; margin:0 auto;}
+.hidden {display:none;}
+
+.banner {
+  width:100%;
+  padding:8px 0;
+  position:absolute;
+  top:0;
+  z-index:100;
+  background-color:#990100;
+  color:#444;
+  text-align:center;
+}
+
+header {
+  padding:10px;
+  position:relative;
+  z-index:5;
+  background-color:#fff;
+  //box-shadow:0 10px 10px -10px #444;
+}
+
+.map, #map {
+  max-width:600px;
+  height:530px;
+  background-color:rgb(0,0,0);
+  border-radius:5px;
+  box-shadow:0 10px 10px -10px #444;
+  float:left:;
+}
+
+#map a.zoomin {
+  left:30px;
+}
+
+#map a.zoomout {
+  left:60px;
+}
+
+.container {
+  position:relative;
+}
+#drawer,
+.container .border {
+  width:40px;
+  height:450px;
+  background-color:#fff;
+  position:absolute;
+  top:0;
+}
+.container .border.left {
+  left:0;
+}
+
+#drawer,
+.container .border.right {
+  right:0;
+}
+
+.drawerchart {
+	margin:auto;
+	height:30%;
+	position:absolute;
+	left:0;
+}
+
+
+#infographic {
+  padding:20px;
+  position:relative;
+  background-color:#fff;
+  box-shadow:0 -10px 10px -10px #444;
+  display:block;
+}
+
+p {
+  font-size:14px;
+}
+
+.filter {
+  margin-bottom:20px;
+}
+
+h1, h2, h3 {
+  font-family: OpenSansBold, Helvetica, Arial, "sans-serif";
+  color:#444;
+}
+
+.chart ul, li {
+  list-style:none;
+  display:block;
+}
+
+.chart  {
+  height:300px;
+  width:50%;
+}
+
+#infographic {
+  height:auto;
+}
+.social {
+  float:right;
+}
+
+.social .fb-like, .social .twitter-share-button, .social iframe {
+  float:left;
+}
+
+.social .fb_iframe_widget span {
+  display:inline;
+  vertical-align:baseline;
+}
+
+#infographic h2 {
+  float:left;
+}
+
+select {
+  float:right;
+}
+
+#sidebar {
+  display:none;
+}
+
+a.footer {
+  padding:10px;
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  display:block;
+  background-color:rgba(0,0,0,0.5);
+  color:#fff;
+  font-size:24px;
+  text-align:center;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+
+.wax-tooltip {
+  width:300px;
+  padding:20px;
+  z-index:999999;
+  position:absolute;
+  top:0;
+  left:0;
+  background-color:#333;
+  color:#fff;
+  color:#fea;
+  -webkit-user-select:auto;
+  opacity:1;
+  -webkit-transition:opacity 150ms;
+  -moz-transition:opacity 150ms;
+}
+
+.wax-legends .wax-legend {
+  background-color:transparent;
+  color:black;
+  padding:20px;
+}
+.wax-legends .wax-legend .my-legend {
+  background:#fff;
+  background:rgba(255,255,255,.7);
+  padding:20px;
+}
+.wax-legend span.wrapper {
+  background-color:rgb(255,255,255);
+}
+.wax-fade {
+  opacity:0;
+}
+
+@media (min-width: 992px) {
+  a.footer {
+    display:none;
+  }
+
+.schedule, .day, .feature {
+  width:480px;
+  display:block;
+  }
+}
+
+
+.layers a {
+  display:inline;
+  padding:5px;
+  margin:5px 0;
+  background:#eee;
+  max-width:300px;
+  position:relative;
+  top:10px;
+  right:auto;
+  left:auto;
+}
+.layers a:hover, .layers a:focus, .layers a.active {
+  background:#369;
+  color:white;
+}
+.buttons ul, li {
+  display:inline;
+  list-style:none;
+}
+.wax-tooltip .numberfeature h1 {
+  font-size:48;
+}
+.wax-tooltip {
+	opacity:0;
+	max-width:0;
+	max-height:0;
+}
+#newtables div,
+tr, th, tbody, thead {
+	height:0px !important;
+	width:0px;
+	min-width:0px;
+	max-width:0px;
+	max-height:0px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	z-index:0;
+	opacity:0;
+	overflow:hidden !important;
+}
+.wax-attribution .wax-mm {
+	opacity:0 !important;
+	position:absolute;
+	height:0;
+	width:0 !important;
+}
+/*.highcharts-tooltip,
+.highcharts-tooltip span,
+.highcharts-tooltip span span {
+	position:absolute;
+	bottom:20px;
+	right:30px;
+	padding:0;
+	margin:10px;
+}*/
+.highcharts-container {
+  -webkit-box-shadow: 5px 10px 10px -10px #444;
+  box-shadow: 5px 10px 10px -10px #444;
+}
+.info ul li,
+.drawerchart,
+.drawerchart .highcharts-container {
+	position:relative;
+	height:30%;
+	width:300px;
+}
+.drawerchart {
+	height: 150px;
+	position: relative;
+}
+
+li .doublechart {
+	width:80%;
+	list-style:none;
+	float:center;
+	height:300px;
+	display:inline;
+	margin:auto;
+	
+}
+
+#chart4, #chart5, #chart6, #chart7, #chart8 {
+	width:80%;
+	position:relative;
+	margin:auto;
+}
+
+div.mappage.wrapper {
+	max-width:400px;
+	height:550px;
+}
+
+
+.map {
+		height:500px;
+		width:550px;
+		margin-left:40px;
+		-webkit-box-shadow: 5px 10px 10px -10px #444;
+	    box-shadow: 5px 10px 10px -10px #444;
+	}

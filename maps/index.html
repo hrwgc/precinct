@@ -1,0 +1,180 @@
+---
+title: "Maps"
+description: ""
+layout: default
+---
+{% include JB/setup %}
+
+<div class="layout-clearfix">
+<h2 class="title">2008</h2>
+<div class="mappage wrapper"><div class="map" id="map1"></div></div>
+<h2 class="title">2009</h2>
+<div class="mappage wrapper"><div class="map" id="map2"></div></div>
+<h2 class="title">2010</h2>
+<div class="mappage wrapper"><div class="map" id="map3"></div></div>
+<h2 class="title">2011</h2>
+<div class="mappage wrapper"><div class="map" id="map4"></div></div>
+</div>
+
+<script type='text/javascript' src='{{ASSET_PATH}}/themes/core/js/ext/jquery/jquery-1.7.2.min.js'></script>
+
+<script type='text/javascript' src='{{ASSET_PATH}}/themes/core/js/ext/modestmaps-js/modestmaps.min.js'></script>
+
+<script type='text/javascript' src='{{ASSET_PATH}}/themes/core/js/ext/easey/src/easey.js'></script>
+
+<script type='text/javascript' src='{{ASSET_PATH}}/themes/core/js/ext/easey/src/easey.handlers.js'></script>
+<script type='text/javascript' src='{{ASSET_PATH}}/themes/core/js/ext/wax/dist/wax.mm.min.js'></script>
+<script type='text/javascript' src='{{ASSET_PATH}}/themes/core/js/ext/highcharts/js/highcharts.js'></script>
+
+<!-- Map Layers -->
+<script src="{{ASSET_PATH}}/themes/core/js/script.js"></script>
+
+
+<!-- chart layers -->
+<script src="{{ASSET_PATH}}/themes/core/js/chart.js"></script>
+
+<script type="text/javascript">
+ var main = Map('map1', {
+     api: 'http://a.tiles.mapbox.com/v3/herwig.map-4qy8mic8.jsonp',
+     center: {
+             lat: 40.63,
+             lon: -73.9,
+             zoom: 13,
+             ease: 1000
+        },
+     zoomRange: [10, 18],
+     features: [
+         'tooltips',        
+         'zoompan',
+         'legend'
+     ]
+  });
+
+main.layers({
+
+     home: {
+         api: 'http://a.tiles.mapbox.com/v3/herwig.map-4qy8mic8.jsonp',
+         center: {
+                 lat: 40.63,
+                 lon: -73.9,
+                 zoom: 13,
+                 ease: 1000
+            },
+         zoomRange: [10, 17],
+         features: [
+             'tooltips',        
+             'zoompan',
+             'legend'
+         ],
+         initial:true
+		}
+  });
+ var main = Map('map2', {
+     api: 'http://a.tiles.mapbox.com/v3/herwig.map-g6d2agkw.jsonp',
+     center: {
+             lat: 40.63,
+             lon: -73.9,
+             zoom: 13,
+             ease: 1000
+        },
+     zoomRange: [10, 18],
+     features: [
+         'tooltips',        
+         'zoompan',
+         'legend'
+     ]
+  });
+
+main.layers({
+
+     home: {
+         api: 'http://a.tiles.mapbox.com/v3/herwig.map-g6d2agkw.jsonp',
+         center: {
+                 lat: 40.63,
+                 lon: -73.9,
+                 zoom: 13,
+                 ease: 1000
+            },
+         zoomRange: [10, 17],
+         features: [
+             'tooltips',        
+             'zoompan',
+             'legend'
+         ],
+         initial:true
+		}
+  });
+
+ var main = Map('map3', {
+     api: 'http://a.tiles.mapbox.com/v3/herwig.map-jubdtsus.jsonp',
+     center: {
+             lat: 40.63,
+             lon: -73.9,
+             zoom: 13,
+             ease: 1000
+        },
+     zoomRange: [10, 18],
+     features: [
+         'tooltips',        
+         'zoompan',
+         'legend'
+     ]
+  });
+
+main.layers({
+
+     home: {
+         api: 'http://a.tiles.mapbox.com/v3/herwig.map-jubdtsus.jsonp',
+         center: {
+                 lat: 40.63,
+                 lon: -73.9,
+                 zoom: 13,
+                 ease: 1000
+            },
+         zoomRange: [10, 17],
+         features: [
+             'tooltips',        
+             'zoompan',
+             'legend'
+         ],
+         initial:true
+		}
+  });
+
+
+ var main = Map('map4', {
+     api: 'http://a.tiles.mapbox.com/v3/herwig.map-apqr56cn.jsonp',
+     center: {
+             lat: 40.63,
+             lon: -73.9,
+             zoom: 13,
+             ease: 1000
+        },
+     zoomRange: [10, 18],
+     features: [
+         'tooltips',        
+         'zoompan',
+         'legend'
+     ]
+  });
+
+main.layers({
+
+     home: {
+         api: 'http://a.tiles.mapbox.com/v3/herwig.map-apqr56cn.jsonp',
+         center: {
+                 lat: 40.63,
+                 lon: -73.9,
+                 zoom: 13,
+                 ease: 1000
+            },
+         zoomRange: [10, 17],
+         features: [
+             'tooltips',        
+             'zoompan',
+             'legend'
+         ],
+         initial:true
+		}
+  });
+</script>
