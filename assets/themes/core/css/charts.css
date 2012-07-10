@@ -1,0 +1,47 @@
+.charts
+	body, .charts h1, .charts h2, .charts h3, .charts h4, .charts a, .charts div, .charts .highcharts-tooltips, .charts .highcharts-legend-item, .charts .highcharts-title, .charts .highcharts-legend {
+	font-family: "Helvetica", Arial, "Pt Sans", sans-serif;
+	background-color:#ccc;
+}
+
+.chart {
+	width:750px;
+	height:400px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.charts body, h1, h2, h3, h4 {
+  color: rgb(65,68,73);
+
+}
+
+.charts h3, .charts h4 {
+  font-weight:400;
+  font-style:normal;
+}
+
+.charts h4, .charts h4 a {
+	font-style:italic;
+	font-weight:normal;
+}
+
+
+.charts .highcharts-tooltips {
+	z-index:999999;
+	color:rgb(230,230,230);
+	background-color:rgb(65,68,73);
+
+}
+.charts .highcharts-container {
+	background-color:rgb(230,230,230);
+	border-radius:.5em;
+}
+
+.charts a:hover {
+  background-color:rgb(65,68,73);
+  color:rgb(230,230,230);
+  padding:5px;
+	border-radius:.25em;
+  
+}
