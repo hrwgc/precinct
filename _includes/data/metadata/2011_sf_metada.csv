@@ -1,0 +1,377 @@
+fld_name,fld_val,fld_lab
+pct,1,1
+pct,5,5
+pct,6,6
+pct,7,7
+pct,9,9
+pct,10,10
+pct,13,13
+pct,14,14
+pct,17,17
+pct,18,18
+pct,19,19
+pct,20,20
+pct,22,22
+pct,23,23
+pct,24,24
+pct,25,25
+pct,26,26
+pct,28,28
+pct,30,30
+pct,32,32
+pct,33,33
+pct,34,34
+pct,40,40
+pct,41,41
+pct,42,42
+pct,43,43
+pct,44,44
+pct,45,45
+pct,46,46
+pct,47,47
+pct,48,48
+pct,49,49
+pct,50,50
+pct,52,52
+pct,60,60
+pct,61,61
+pct,62,62
+pct,63,63
+pct,66,66
+pct,67,67
+pct,68,68
+pct,69,69
+pct,70,70
+pct,71,71
+pct,72,72
+pct,73,73
+pct,75,75
+pct,76,76
+pct,77,77
+pct,78,78
+pct,79,79
+pct,81,81
+pct,83,83
+pct,84,84
+pct,88,88
+pct,90,90
+pct,94,94
+pct,100,100
+pct,101,101
+pct,102,102
+pct,103,103
+pct,104,104
+pct,105,105
+pct,106,106
+pct,107,107
+pct,108,108
+pct,109,109
+pct,110,110
+pct,111,111
+pct,112,112
+pct,113,113
+pct,114,114
+pct,115,115
+pct,120,120
+pct,122,122
+pct,123,123
+inout,I,Inside
+inout,O,Outside
+trhsloc, ,Neither
+trhsloc,H,Housing
+trhsloc,T,Transit
+typeofid,O,Other
+typeofid,P,Photo
+typeofid,R,Refused
+typeofid,V,Verbal
+explnstp,N,No
+explnstp,Y,Yes
+othpers,N,No
+othpers,Y,Yes
+arstmade,N,No
+arstmade,Y,Yes
+sumissue,N,No
+sumissue,Y,Yes
+offunif,N,No
+offunif,Y,Yes
+officrid, ,Not Listed
+officrid,0,No
+officrid,I,Id
+frisked,N,No
+frisked,Y,Yes
+searched,N,No
+searched,Y,Yes
+contrabn,N,No
+contrabn,Y,Yes
+adtlrept,N,No
+adtlrept,Y,Yes
+pistol,N,No
+pistol,Y,Yes
+riflshot,N,No
+riflshot,Y,Yes
+asltweap,N,No
+asltweap,Y,Yes
+knifcuti,N,No
+knifcuti,Y,Yes
+machgun,N,No
+machgun,Y,Yes
+othrweap,N,No
+othrweap,Y,Yes
+pf_hands,N,No
+pf_hands,Y,Yes
+pf_wall,N,No
+pf_wall,Y,Yes
+pf_grnd,N,No
+pf_grnd,Y,Yes
+pf_drwep,N,No
+pf_drwep,Y,Yes
+pf_ptwep,N,No
+pf_ptwep,Y,Yes
+pf_baton,N,No
+pf_baton,Y,Yes
+pf_hcuff,N,No
+pf_hcuff,Y,Yes
+pf_pepsp,N,No
+pf_pepsp,Y,Yes
+pf_other,N,No
+pf_other,Y,Yes
+radio,N,No
+radio,Y,Yes
+ac_rept,N,No
+ac_rept,Y,Yes
+ac_inves,N,No
+ac_inves,Y,Yes
+rf_vcrim,N,No
+rf_vcrim,Y,Yes
+rf_othsw,N,No
+rf_othsw,Y,Yes
+ac_proxm,N,No
+ac_proxm,Y,Yes
+rf_attir,N,No
+rf_attir,Y,Yes
+cs_objcs,N,No
+cs_objcs,Y,Yes
+cs_descr,N,No
+cs_descr,Y,Yes
+cs_casng,N,No
+cs_casng,Y,Yes
+cs_lkout,N,No
+cs_lkout,Y,Yes
+rf_vcact,N,No
+rf_vcact,Y,Yes
+cs_cloth,N,No
+cs_cloth,Y,Yes
+cs_drgtr,N,No
+cs_drgtr,Y,Yes
+ac_evasv,N,No
+ac_evasv,Y,Yes
+ac_assoc,N,No
+ac_assoc,Y,Yes
+cs_furtv,N,No
+cs_furtv,Y,Yes
+rf_rfcmp,N,No
+rf_rfcmp,Y,Yes
+ac_cgdir,N,No
+ac_cgdir,Y,Yes
+rf_verbl,N,No
+rf_verbl,Y,Yes
+cs_vcrim,N,No
+cs_vcrim,Y,Yes
+cs_bulge,N,No
+cs_bulge,Y,Yes
+cs_other,N,No
+cs_other,Y,Yes
+ac_incid,N,No
+ac_incid,Y,Yes
+ac_time,N,No
+ac_time,Y,Yes
+rf_knowl,N,No
+rf_knowl,Y,Yes
+ac_stsnd,N,No
+ac_stsnd,Y,Yes
+ac_other,N,No
+ac_other,Y,Yes
+sb_hdobj,N,No
+sb_hdobj,Y,Yes
+sb_outln,N,No
+sb_outln,Y,Yes
+sb_admis,N,No
+sb_admis,Y,Yes
+sb_other,N,No
+sb_other,Y,Yes
+rf_furt,N,No
+rf_furt,Y,Yes
+rf_bulg,N,No
+rf_bulg,Y,Yes
+offverb, ,Not Listed
+offverb,0,No
+offverb,V,Verbal
+offshld, ,Not Listed
+offshld,0,No
+offshld,S,Shield
+forceuse,,Not Listed
+forceuse,DS,Defense Of Self
+forceuse,DO,Defense Of Other
+forceuse,OR,Overcome Resistence
+forceuse,OT,Other
+forceuse,SF,Suspected Flight
+forceuse,SW,Suspected Weapon
+sex, ,Not Listed
+sex,F,Female
+sex,M,Male
+sex,Z,Unknown
+race, ,Not Listed
+race,A,Asian/Pacific Islander
+race,B,Black
+race,I,American Indian/Alaskan Native
+race,P,Black-Hispanic
+race,Q,White-Hispanic
+race,W,White
+race,X,Unknown
+race,Z,Other
+haircolr, ,Not Listed
+haircolr,BA,Bald
+haircolr,BK,Black
+haircolr,BL,Blond
+haircolr,BR,Brown
+haircolr,DY,Dyed
+haircolr,FR,Frosted
+haircolr,GY,Gray
+haircolr,RD,Red
+haircolr,SN,Sandy
+haircolr,SP,Salt And Pepper
+haircolr,WH,White
+haircolr,XX,Unknown
+haircolr,ZZ,Other
+eyecolor, ,Not Listed
+eyecolor,BK,Black
+eyecolor,BL,Blue
+eyecolor,BR,Brown
+eyecolor,DF,Two Different
+eyecolor,GR,Green
+eyecolor,GY,Gray
+eyecolor,HA,Hazel
+eyecolor,MA,Maroon
+eyecolor,PK,Pink
+eyecolor,VI,Violet
+eyecolor,XX,Unknown
+eyecolor,ZZ,Other
+build, ,Not Listed
+build,H,Heavy
+build,M,Medium
+build,T,Thin
+build,U,Muscular
+build,Z,Unknown
+detailCM,1,Abandonment Of A Child
+detailCM,2,Abortion
+detailCM,3,Absconding
+detailCM,4,Adultery
+detailCM,5,Aggravated Assault
+detailCM,6,Aggravated Harassment
+detailCM,7,Aggravated Sexual Abuse
+detailCM,8,Arson
+detailCM,9,Assault
+detailCM,10,Auto Stripping
+detailCM,11,Bigamy
+detailCM,12,Bribe Receiving
+detailCM,13,Bribery
+detailCM,14,Burglary
+detailCM,15,Coercion
+detailCM,16,Computer Tampering
+detailCM,17,Computer Trespass
+detailCM,18,Course Of Sexual Conduct
+detailCM,19,Cpsp
+detailCM,20,Cpw
+detailCM,21,Creating A Hazard
+detailCM,22,Criminal Contempt
+detailCM,23,Criminal Mischief
+detailCM,24,Criminal Possesion Of Controlled Substance
+detailCM,25,Criminal Possession Of Computer Material
+detailCM,26,Criminal Possession Of Forged Instrument
+detailCM,27,Criminal Possession Of Marihuana
+detailCM,28,Criminal Sale Of Controlled Substance
+detailCM,29,Criminal Sale Of Marihuana
+detailCM,30,Criminal Tampering
+detailCM,31,Criminal Trespass
+detailCM,32,Custodial Interference
+detailCM,33,Eaves Dropping
+detailCM,34,Endanger The Welfare Of A Child
+detailCM,35,Escape
+detailCM,36,Falsify Business Records
+detailCM,37,Forgery
+detailCM,38,Forgery Of A Vin
+detailCM,39,Fortune Telling
+detailCM,40,Fraud
+detailCM,41,Fraudulent Accosting
+detailCM,42,Fraudulent Make Electronic Access Device
+detailCM,43,Fraudulent Obtaining A Signature
+detailCM,44,Gambling
+detailCM,45,Grand Larceny
+detailCM,46,Grand Larceny Auto
+detailCM,47,Harassment
+detailCM,48,Hazing
+detailCM,49,Hindering Prosecution
+detailCM,50,Incest
+detailCM,51,Insurance Fraud
+detailCM,52,Issue A False Certificate
+detailCM,53,Issue A False Financial Statement
+detailCM,54,Issuing Abortion Articles
+detailCM,55,Jostling
+detailCM,56,Kidnapping
+detailCM,57,Killing Or Injuring A Poilce Animal
+detailCM,58,Loitering
+detailCM,59,Making Graffiti
+detailCM,60,Menacing
+detailCM,61,Misapplication Of Property
+detailCM,62,Murder
+detailCM,63,Obscenity
+detailCM,64,Obstructing Firefighting Operations
+detailCM,65,Obstructing Governmental Administration
+detailCM,66,Offering A False Instrument
+detailCM,67,Official Misconduct
+detailCM,68,Petit Larceny
+detailCM,69,Possession Of Burglar Tools
+detailCM,70,Possession Of Eaves Dropping Devices
+detailCM,71,Possession Of Graffiti Instruments
+detailCM,72,Prohibited Use Of Weapon
+detailCM,73,Promoting Suicide
+detailCM,74,Prostitution
+detailCM,75,Public Display Of Offensive Sexual Material
+detailCM,76,Public Lewdness
+detailCM,77,Rape
+detailCM,78,Reckless Endangerment
+detailCM,79,Reckless Endangerment Property
+detailCM,80,Refusing To Aid A Peace Or Police Officer
+detailCM,81,Rent Gouging
+detailCM,82,Resisting Arrest
+detailCM,83,Reward Official Misconduct
+detailCM,84,Riot
+detailCM,85,Robbery
+detailCM,86,Self Abortion
+detailCM,87,Sexual Abuse
+detailCM,88,Sexual Misconduct
+detailCM,89,Sexual Performance By A Child
+detailCM,90,Sodomy
+detailCM,91,Substitution Of Children
+detailCM,92,Tampering With A Public Record
+detailCM,93,Tampering With Consumer Product
+detailCM,94,Tampering With Private Communications
+detailCM,95,Terrorism
+detailCM,96,Theft Of Services
+detailCM,97,Trademark Counterfeiting
+detailCM,98,Unlawfully Dealing With Fireworks
+detailCM,99,Unauthorized Recording
+detailCM,100,Unauthorized Use Of A Vehicle
+detailCM,101,Unauthorized Use Of Computer
+detailCM,102,Unlawful Assembly
+detailCM,103,Unlawful Duplication Of Computer Material
+detailCM,104,Unlawful Possession Of Radio Devices
+detailCM,105,"Unlawful Use Of Credit Card, Debit Card"
+detailCM,106,Unlawful Use Of Secret Scientific Material
+detailCM,107,Unlawful Wearing A Body Vest
+detailCM,108,Unlawfull Imprisonment
+detailCM,109,Unlawfully Dealing With A Child
+detailCM,110,Unlawfully Use Slugs
+detailCM,111,Vehicular Assault
+detailCM,112,Other
+detailCM,113,Forcible Touching

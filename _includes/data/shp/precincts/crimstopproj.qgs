@@ -1,0 +1,423 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis projectname="" version="1.9.90-Alpha">
+    <title></title>
+    <mapcanvas>
+        <units>meters</units>
+        <extent>
+            <xmin>-8267649.095772</xmin>
+            <ymin>4936119.260077</ymin>
+            <xmax>-8202701.098560</xmax>
+            <ymax>5002104.162905</ymax>
+        </extent>
+        <projections>1</projections>
+        <destinationsrs>
+            <spatialrefsys>
+                <proj4>+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs</proj4>
+                <srsid>3644</srsid>
+                <srid>900913</srid>
+                <authid>EPSG:900913</authid>
+                <description>Google Mercator</description>
+                <projectionacronym>merc</projectionacronym>
+                <ellipsoidacronym>WGS84</ellipsoidacronym>
+                <geographicflag>false</geographicflag>
+            </spatialrefsys>
+        </destinationsrs>
+    </mapcanvas>
+    <legend updateDrawingOrder="false">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="crimstop" showFeatureCount="0">
+            <filegroup open="false" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="crimstop20120621074349893" visible="1"/>
+            </filegroup>
+        </legendlayer>
+    </legend>
+    <projectlayers layercount="1">
+        <maplayer minimumScale="0" maximumScale="1e+08" geometry="Polygon" type="vector" hasScaleBasedVisibilityFlag="0">
+            <id>crimstop20120621074349893</id>
+            <datasource>./crimstop.sqlite</datasource>
+            <title></title>
+            <abstract></abstract>
+            <layername>crimstop</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+                    <srsid>3452</srsid>
+                    <srid>4326</srid>
+                    <authid>EPSG:4326</authid>
+                    <description>WGS 84</description>
+                    <projectionacronym>longlat</projectionacronym>
+                    <ellipsoidacronym>WGS84</ellipsoidacronym>
+                    <geographicflag>true</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <transparencyLevelInt>255</transparencyLevelInt>
+            <provider encoding="UTF-8">ogr</provider>
+            <vectorjoins/>
+            <renderer-v2 attr="murder06" symbollevels="0" type="graduatedSymbol">
+                <ranges>
+                    <range symbol="0" lower="-9999" upper="2" label="-9999.0000 - 2.0000"/>
+                    <range symbol="1" lower="2" upper="4" label="2.0000 - 4.0000"/>
+                    <range symbol="2" lower="4" upper="8" label="4.0000 - 8.0000"/>
+                    <range symbol="3" lower="8" upper="13" label="8.0000 - 13.0000"/>
+                    <range symbol="4" lower="13" upper="29" label="13.0000 - 29.0000"/>
+                </ranges>
+                <symbols>
+                    <symbol outputUnit="MM" alpha="1" type="fill" name="0">
+                        <layer pass="0" class="SimpleFill" locked="0">
+                            <prop k="color" v="247,251,255,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="style" v="solid"/>
+                            <prop k="style_border" v="solid"/>
+                            <prop k="width_border" v="0.26"/>
+                        </layer>
+                    </symbol>
+                    <symbol outputUnit="MM" alpha="1" type="fill" name="1">
+                        <layer pass="0" class="SimpleFill" locked="0">
+                            <prop k="color" v="199,220,239,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="style" v="solid"/>
+                            <prop k="style_border" v="solid"/>
+                            <prop k="width_border" v="0.26"/>
+                        </layer>
+                    </symbol>
+                    <symbol outputUnit="MM" alpha="1" type="fill" name="2">
+                        <layer pass="0" class="SimpleFill" locked="0">
+                            <prop k="color" v="114,178,215,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="style" v="solid"/>
+                            <prop k="style_border" v="solid"/>
+                            <prop k="width_border" v="0.26"/>
+                        </layer>
+                    </symbol>
+                    <symbol outputUnit="MM" alpha="1" type="fill" name="3">
+                        <layer pass="0" class="SimpleFill" locked="0">
+                            <prop k="color" v="40,120,184,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="style" v="solid"/>
+                            <prop k="style_border" v="solid"/>
+                            <prop k="width_border" v="0.26"/>
+                        </layer>
+                    </symbol>
+                    <symbol outputUnit="MM" alpha="1" type="fill" name="4">
+                        <layer pass="0" class="SimpleFill" locked="0">
+                            <prop k="color" v="8,48,107,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="style" v="solid"/>
+                            <prop k="style_border" v="solid"/>
+                            <prop k="width_border" v="0.26"/>
+                        </layer>
+                    </symbol>
+                </symbols>
+                <source-symbol>
+                    <symbol outputUnit="MM" alpha="1" type="fill" name="0">
+                        <layer pass="0" class="SimpleFill" locked="0">
+                            <prop k="color" v="96,194,68,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="style" v="solid"/>
+                            <prop k="style_border" v="solid"/>
+                            <prop k="width_border" v="0.26"/>
+                        </layer>
+                    </symbol>
+                </source-symbol>
+                <colorramp type="gradient" name="[source]">
+                    <prop k="color1" v="247,251,255,255"/>
+                    <prop k="color2" v="8,48,107,255"/>
+                    <prop k="stops" v="0.13;222,235,247,255:0.26;198,219,239,255:0.39;158,202,225,255:0.52;107,174,214,255:0.65;66,146,198,255:0.78;33,113,181,255:0.9;8,81,156,255"/>
+                </colorramp>
+                <mode name="quantile"/>
+                <rotation field=""/>
+                <sizescale field=""/>
+            </renderer-v2>
+            <customproperties/>
+            <displayfield>gid</displayfield>
+            <label>0</label>
+            <labelattributes>
+                <label fieldname="" text="Label"/>
+                <family fieldname="" name="Lucida Grande"/>
+                <size fieldname="" units="pt" value="12"/>
+                <bold fieldname="" on="0"/>
+                <italic fieldname="" on="0"/>
+                <underline fieldname="" on="0"/>
+                <strikeout fieldname="" on="0"/>
+                <color fieldname="" red="0" blue="0" green="0"/>
+                <x fieldname=""/>
+                <y fieldname=""/>
+                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+                <angle fieldname="" value="0" auto="0"/>
+                <alignment fieldname="" value="center"/>
+                <buffercolor fieldname="" red="255" blue="255" green="255"/>
+                <buffersize fieldname="" units="pt" value="1"/>
+                <bufferenabled fieldname="" on=""/>
+                <multilineenabled fieldname="" on=""/>
+                <selectedonly on=""/>
+            </labelattributes>
+            <edittypes>
+                <edittype type="0" name="age_q1"/>
+                <edittype type="0" name="age_q2"/>
+                <edittype type="0" name="age_q3"/>
+                <edittype type="0" name="age_q4"/>
+                <edittype type="0" name="age_q5"/>
+                <edittype type="0" name="age_unk"/>
+                <edittype type="0" name="all_hisp"/>
+                <edittype type="0" name="arest_03"/>
+                <edittype type="0" name="arest_04"/>
+                <edittype type="0" name="arest_05"/>
+                <edittype type="0" name="arest_06"/>
+                <edittype type="0" name="arest_07"/>
+                <edittype type="0" name="arest_08"/>
+                <edittype type="0" name="arest_09"/>
+                <edittype type="0" name="arest_10"/>
+                <edittype type="0" name="arest_11"/>
+                <edittype type="0" name="arest_at"/>
+                <edittype type="0" name="assaults00"/>
+                <edittype type="0" name="assaults01"/>
+                <edittype type="0" name="assaults02"/>
+                <edittype type="0" name="assaults03"/>
+                <edittype type="0" name="assaults04"/>
+                <edittype type="0" name="assaults05"/>
+                <edittype type="0" name="assaults06"/>
+                <edittype type="0" name="assaults07"/>
+                <edittype type="0" name="assaults90"/>
+                <edittype type="0" name="assaults91"/>
+                <edittype type="0" name="assaults92"/>
+                <edittype type="0" name="assaults93"/>
+                <edittype type="0" name="assaults94"/>
+                <edittype type="0" name="assaults95"/>
+                <edittype type="0" name="assaults96"/>
+                <edittype type="0" name="assaults97"/>
+                <edittype type="0" name="assaults98"/>
+                <edittype type="0" name="assaults99"/>
+                <edittype type="0" name="bl+hisp"/>
+                <edittype type="0" name="bl_hisp"/>
+                <edittype type="0" name="black"/>
+                <edittype type="0" name="burg00"/>
+                <edittype type="0" name="burg01"/>
+                <edittype type="0" name="burg02"/>
+                <edittype type="0" name="burg03"/>
+                <edittype type="0" name="burg04"/>
+                <edittype type="0" name="burg05"/>
+                <edittype type="0" name="burg06"/>
+                <edittype type="0" name="burg07"/>
+                <edittype type="0" name="burg90"/>
+                <edittype type="0" name="burg91"/>
+                <edittype type="0" name="burg92"/>
+                <edittype type="0" name="burg93"/>
+                <edittype type="0" name="burg94"/>
+                <edittype type="0" name="burg95"/>
+                <edittype type="0" name="burg96"/>
+                <edittype type="0" name="burg97"/>
+                <edittype type="0" name="burg98"/>
+                <edittype type="0" name="burg99"/>
+                <edittype type="0" name="felonies00"/>
+                <edittype type="0" name="felonies01"/>
+                <edittype type="0" name="felonies02"/>
+                <edittype type="0" name="felonies03"/>
+                <edittype type="0" name="felonies04"/>
+                <edittype type="0" name="felonies05"/>
+                <edittype type="0" name="felonies06"/>
+                <edittype type="0" name="felonies07"/>
+                <edittype type="0" name="felonies90"/>
+                <edittype type="0" name="felonies91"/>
+                <edittype type="0" name="felonies92"/>
+                <edittype type="0" name="felonies93"/>
+                <edittype type="0" name="felonies94"/>
+                <edittype type="0" name="felonies95"/>
+                <edittype type="0" name="felonies96"/>
+                <edittype type="0" name="felonies97"/>
+                <edittype type="0" name="felonies98"/>
+                <edittype type="0" name="felonies99"/>
+                <edittype type="0" name="female"/>
+                <edittype type="0" name="gid"/>
+                <edittype type="0" name="inside"/>
+                <edittype type="0" name="larceny00"/>
+                <edittype type="0" name="larceny01"/>
+                <edittype type="0" name="larceny02"/>
+                <edittype type="0" name="larceny03"/>
+                <edittype type="0" name="larceny04"/>
+                <edittype type="0" name="larceny05"/>
+                <edittype type="0" name="larceny06"/>
+                <edittype type="0" name="larceny07"/>
+                <edittype type="0" name="larceny90"/>
+                <edittype type="0" name="larceny91"/>
+                <edittype type="0" name="larceny92"/>
+                <edittype type="0" name="larceny93"/>
+                <edittype type="0" name="larceny94"/>
+                <edittype type="0" name="larceny95"/>
+                <edittype type="0" name="larceny96"/>
+                <edittype type="0" name="larceny97"/>
+                <edittype type="0" name="larceny98"/>
+                <edittype type="0" name="larceny99"/>
+                <edittype type="0" name="male"/>
+                <edittype type="0" name="movtheft00"/>
+                <edittype type="0" name="movtheft01"/>
+                <edittype type="0" name="movtheft02"/>
+                <edittype type="0" name="movtheft03"/>
+                <edittype type="0" name="movtheft04"/>
+                <edittype type="0" name="movtheft05"/>
+                <edittype type="0" name="movtheft06"/>
+                <edittype type="0" name="movtheft07"/>
+                <edittype type="0" name="movtheft90"/>
+                <edittype type="0" name="movtheft91"/>
+                <edittype type="0" name="movtheft92"/>
+                <edittype type="0" name="movtheft93"/>
+                <edittype type="0" name="movtheft94"/>
+                <edittype type="0" name="movtheft95"/>
+                <edittype type="0" name="movtheft96"/>
+                <edittype type="0" name="movtheft97"/>
+                <edittype type="0" name="movtheft98"/>
+                <edittype type="0" name="movtheft99"/>
+                <edittype type="0" name="murder00"/>
+                <edittype type="0" name="murder01"/>
+                <edittype type="0" name="murder02"/>
+                <edittype type="0" name="murder03"/>
+                <edittype type="0" name="murder04"/>
+                <edittype type="0" name="murder05"/>
+                <edittype type="0" name="murder06"/>
+                <edittype type="0" name="murder07"/>
+                <edittype type="0" name="murder90"/>
+                <edittype type="0" name="murder91"/>
+                <edittype type="0" name="murder92"/>
+                <edittype type="0" name="murder93"/>
+                <edittype type="0" name="murder94"/>
+                <edittype type="0" name="murder95"/>
+                <edittype type="0" name="murder96"/>
+                <edittype type="0" name="murder97"/>
+                <edittype type="0" name="murder98"/>
+                <edittype type="0" name="murder99"/>
+                <edittype type="0" name="no_unifo"/>
+                <edittype type="0" name="outside"/>
+                <edittype type="0" name="precinct"/>
+                <edittype type="0" name="propcrime00"/>
+                <edittype type="0" name="propcrime01"/>
+                <edittype type="0" name="propcrime02"/>
+                <edittype type="0" name="propcrime03"/>
+                <edittype type="0" name="propcrime04"/>
+                <edittype type="0" name="propcrime05"/>
+                <edittype type="0" name="propcrime06"/>
+                <edittype type="0" name="propcrime07"/>
+                <edittype type="0" name="propcrime90"/>
+                <edittype type="0" name="propcrime91"/>
+                <edittype type="0" name="propcrime92"/>
+                <edittype type="0" name="propcrime93"/>
+                <edittype type="0" name="propcrime94"/>
+                <edittype type="0" name="propcrime95"/>
+                <edittype type="0" name="propcrime96"/>
+                <edittype type="0" name="propcrime97"/>
+                <edittype type="0" name="propcrime98"/>
+                <edittype type="0" name="propcrime99"/>
+                <edittype type="0" name="race_o_u"/>
+                <edittype type="0" name="rape00"/>
+                <edittype type="0" name="rape01"/>
+                <edittype type="0" name="rape02"/>
+                <edittype type="0" name="rape03"/>
+                <edittype type="0" name="rape04"/>
+                <edittype type="0" name="rape05"/>
+                <edittype type="0" name="rape06"/>
+                <edittype type="0" name="rape07"/>
+                <edittype type="0" name="rape90"/>
+                <edittype type="0" name="rape91"/>
+                <edittype type="0" name="rape92"/>
+                <edittype type="0" name="rape93"/>
+                <edittype type="0" name="rape94"/>
+                <edittype type="0" name="rape95"/>
+                <edittype type="0" name="rape96"/>
+                <edittype type="0" name="rape97"/>
+                <edittype type="0" name="rape98"/>
+                <edittype type="0" name="rape99"/>
+                <edittype type="0" name="robbery00"/>
+                <edittype type="0" name="robbery01"/>
+                <edittype type="0" name="robbery02"/>
+                <edittype type="0" name="robbery03"/>
+                <edittype type="0" name="robbery04"/>
+                <edittype type="0" name="robbery05"/>
+                <edittype type="0" name="robbery06"/>
+                <edittype type="0" name="robbery07"/>
+                <edittype type="0" name="robbery90"/>
+                <edittype type="0" name="robbery91"/>
+                <edittype type="0" name="robbery92"/>
+                <edittype type="0" name="robbery93"/>
+                <edittype type="0" name="robbery94"/>
+                <edittype type="0" name="robbery95"/>
+                <edittype type="0" name="robbery96"/>
+                <edittype type="0" name="robbery97"/>
+                <edittype type="0" name="robbery98"/>
+                <edittype type="0" name="robbery99"/>
+                <edittype type="0" name="sex_unk"/>
+                <edittype type="0" name="shape_area"/>
+                <edittype type="0" name="shape_leng"/>
+                <edittype type="0" name="stop_03"/>
+                <edittype type="0" name="stop_04"/>
+                <edittype type="0" name="stop_05"/>
+                <edittype type="0" name="stop_06"/>
+                <edittype type="0" name="stop_07"/>
+                <edittype type="0" name="stop_08"/>
+                <edittype type="0" name="stop_09"/>
+                <edittype type="0" name="stop_10"/>
+                <edittype type="0" name="stop_11"/>
+                <edittype type="0" name="stop_at"/>
+                <edittype type="0" name="sumis_03"/>
+                <edittype type="0" name="sumis_04"/>
+                <edittype type="0" name="sumis_05"/>
+                <edittype type="0" name="sumis_06"/>
+                <edittype type="0" name="sumis_07"/>
+                <edittype type="0" name="sumis_08"/>
+                <edittype type="0" name="sumis_09"/>
+                <edittype type="0" name="sumis_10"/>
+                <edittype type="0" name="sumis_11"/>
+                <edittype type="0" name="sumis_at"/>
+                <edittype type="0" name="unifo"/>
+                <edittype type="0" name="vcrimes00"/>
+                <edittype type="0" name="vcrimes01"/>
+                <edittype type="0" name="vcrimes02"/>
+                <edittype type="0" name="vcrimes03"/>
+                <edittype type="0" name="vcrimes04"/>
+                <edittype type="0" name="vcrimes05"/>
+                <edittype type="0" name="vcrimes06"/>
+                <edittype type="0" name="vcrimes07"/>
+                <edittype type="0" name="vcrimes90"/>
+                <edittype type="0" name="vcrimes91"/>
+                <edittype type="0" name="vcrimes92"/>
+                <edittype type="0" name="vcrimes93"/>
+                <edittype type="0" name="vcrimes94"/>
+                <edittype type="0" name="vcrimes95"/>
+                <edittype type="0" name="vcrimes96"/>
+                <edittype type="0" name="vcrimes97"/>
+                <edittype type="0" name="vcrimes98"/>
+                <edittype type="0" name="vcrimes99"/>
+                <edittype type="0" name="weapon"/>
+                <edittype type="0" name="wh_hisp"/>
+                <edittype type="0" name="white"/>
+            </edittypes>
+            <editform></editform>
+            <editforminit></editforminit>
+            <annotationform></annotationform>
+            <attributeactions/>
+        </maplayer>
+    </projectlayers>
+    <properties>
+        <SpatialRefSys>
+            <ProjectCrs type="QString">EPSG:900913</ProjectCrs>
+        </SpatialRefSys>
+        <Paths>
+            <Absolute type="bool">false</Absolute>
+        </Paths>
+        <Gui>
+            <SelectionColorBluePart type="int">255</SelectionColorBluePart>
+            <CanvasColorGreenPart type="int">25</CanvasColorGreenPart>
+            <CanvasColorRedPart type="int">25</CanvasColorRedPart>
+            <SelectionColorRedPart type="int">1</SelectionColorRedPart>
+            <SelectionColorAlphaPart type="int">209</SelectionColorAlphaPart>
+            <SelectionColorGreenPart type="int">242</SelectionColorGreenPart>
+            <CanvasColorBluePart type="int">25</CanvasColorBluePart>
+        </Gui>
+        <PositionPrecision>
+            <DecimalPlaces type="int">2</DecimalPlaces>
+            <Automatic type="bool">true</Automatic>
+        </PositionPrecision>
+    </properties>
+</qgis>
