@@ -1,0 +1,40 @@
+{
+  "bounds": [
+    -74.3445,
+    40.4887,
+    -73.6359,
+    40.9384
+  ],
+  "center": [
+    -73.9057,
+    40.7186,
+    11
+  ],
+  "format": "png",
+  "interactivity": false,
+  "minzoom": 8,
+  "maxzoom": 15,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "linestring",
+      "id": "blcontours2008",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/christopherherwig/GIS/stop-and-frisk/july/bl-contours-2008.shp",
+        "id": "blcontours2008",
+        "project": "sf-contours-example",
+        "srs": null
+      },
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "name": "blcontours2008"
+    }
+  ],
+  "name": "Black, Latino, and Black Latino Stops, 2008",
+  "description": "",
+  "attribution": ""
+}
