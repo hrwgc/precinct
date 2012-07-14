@@ -91,7 +91,7 @@ a {
     padding: 20px 10px;
     }
 #sidebar {
-  background: #2284ed;
+  background: #fff;
   position: absolute;
   width: 170px;
   top: 200px;
@@ -127,12 +127,6 @@ h1#title {
   margin: 15px 10px 5px 0;
   padding: 0;
   }
-  .green-data {
-    float: left;
-    margin: 22px 0 0;
-    font-size: 20px;
-    color: #fff;
-    }
 
 h6.description {
   clear: both;
@@ -141,11 +135,11 @@ h6.description {
   line-height: 18px;
   }
   h6.description a {
-    color: #fff;
+    color: #000;
     font-weight: bold;
     }
     h6.description a:hover {
-      color: #fff;
+      color: #2284ed;
       }
 
 .reinventgreen {
@@ -174,11 +168,11 @@ h6.description {
     text-decoration: none;
     }
   #layer-switcher li:hover {
-    background-color: #ecefe6;
-    color:#404040;
+    background-color: #404040;
+    color: #ecefe6;
     }
   #layer-switcher li.active a.title {
-    color: #001e2d;
+    color: #fff;
     }
   #layer-switcher li .description {
     background: #fff;
@@ -207,7 +201,7 @@ h6.description {
 
 /* Notes */
 #sidebar .notes {
-  background: #ecefe6;
+  background: #fff;
   font-size: 11px;
   line-height: 18px;
   color: #656565;
@@ -237,7 +231,7 @@ h6.description {
     }
 
 #share {
-  background: #404040;
+  background: #fff;
   top: 80px;
   right: 20px;
   position: absolute;
@@ -325,7 +319,7 @@ h6.description {
 a.zoomer {
   text-decoration: none;
   position: absolute;
-  background-color: #404040;
+  background-color: #fff;
   line-height: 30px;
   font-size: 20px;
   z-index: 1000;
@@ -333,7 +327,7 @@ a.zoomer {
   width: 30px;
   height: 30px;
   top: 100px;
-  color: #fff;
+  color: #404040;
   z-index: 200;
   }
   a.zoomin {
