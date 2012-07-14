@@ -91,7 +91,7 @@ a {
     padding: 20px 10px;
     }
 #sidebar {
-  background: #ecefe6;
+  background: #2284ed;
   position: absolute;
   width: 170px;
   top: 200px;
@@ -111,7 +111,7 @@ a {
 
 #layer-switcher li.active,
 .gradient {
-  background-color: #f05320;
+  background-color: #2284ed;
   }
 
 /* --------------------------------------------------------
@@ -141,7 +141,7 @@ h6.description {
   line-height: 18px;
   }
   h6.description a {
-    color: #797979;
+    color: #fff;
     font-weight: bold;
     }
     h6.description a:hover {
@@ -174,11 +174,11 @@ h6.description {
     text-decoration: none;
     }
   #layer-switcher li:hover {
-    background-color: rgb(34,132,237);
-    color:#fff;
+    background-color: #ecefe6;
+    color:#404040;
     }
   #layer-switcher li.active a.title {
-    color: #eee;
+    color: #001e2d;
     }
   #layer-switcher li .description {
     background: #fff;
@@ -237,7 +237,7 @@ h6.description {
     }
 
 #share {
-  background: #ecefe6;
+  background: #404040;
   top: 80px;
   right: 20px;
   position: absolute;
