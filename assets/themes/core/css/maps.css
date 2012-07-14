@@ -88,19 +88,19 @@ a {
   z-index: 5000;
   }
   #header .inner {
-    padding: 0 10px;
+    padding: 20px 10px;
     }
 #sidebar {
   background: #ecefe6;
   position: absolute;
   width: 170px;
-  top: 0;
+  top: 200px;
   right: 0;
   z-index: 100;
   opacity:.7;
   }
   #sidebar .inner {
-    padding-top: 120px;
+    padding-top: 20px;
     }
 #attribution {
   position: absolute;
@@ -111,12 +111,7 @@ a {
 
 #layer-switcher li.active,
 .gradient {
-  background-color: #202020;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ecefe6), to(#b1b3ac));
-  background-image: -webkit-linear-gradient(top, #ecefe6, #b1b3ac);
-  background-image:    -moz-linear-gradient(top, #ecefe6, #b1b3ac);
-  background-image:      -o-linear-gradient(top, #ecefe6, #b1b3ac);
-  background-image:         linear-gradient(to bottom, #ecefe6, #b1b3ac);  
+  background-color: #f05320;
   }
 
 /* --------------------------------------------------------
@@ -179,7 +174,8 @@ h6.description {
     text-decoration: none;
     }
   #layer-switcher li:hover {
-    background-color: #fa514c;
+    background-color: rgb(34,132,237);
+    color:#fff;
     }
   #layer-switcher li.active a.title {
     color: #eee;
