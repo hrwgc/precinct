@@ -510,9 +510,9 @@ a.zoomer {
   padding: 10px;
   -webkit-user-select:auto;
   right: 20px;
-  top: 100px;
+  top: 50px;
   max-width: 300px;
-  opacity:1;
+  opacity:.81;
   -webkit-transition:opacity 150ms;
   -moz-transition:opacity 150ms;
   -moz-border-radius: 2px;
@@ -521,6 +521,10 @@ a.zoomer {
   -moz-box-shadow:rgba(0,0,0,0.1) 3px 3px 3px;
   -webkit-box-shadow:rgba(0,0,0,0.1) 3px 3px 3px;
   }
+
+ .wax-tooltip h3 {
+	text-transform:uppercase;
+}
 .wax-fade { opacity:0; }
 .wax-tooltip b {
   font-size: 10px;
