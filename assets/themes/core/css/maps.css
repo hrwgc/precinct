@@ -51,7 +51,7 @@ body {
 h1 {
   font-size: 25px;
   font-weight: 900;
-  color: #999;
+  color: #000;
   text-shadow: 0 -1px 0 #000;
   margin-bottom: 5px;
   }
@@ -110,7 +110,7 @@ a {
   }
 
 #layer-switcher li.active,
-.gradient {
+ {
   background-color: #2284ed;
   }
 
