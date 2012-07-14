@@ -44,7 +44,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 body {
   background: #111;
   font: 15px/20px 'Helvetica Neue',Helvetica,Arial,sans-serif;
-  color: #7a7a7a;
+  color: #38424e;
    -webkit-font-smoothing: antialiased;
   }
 
@@ -59,7 +59,7 @@ p {
   padding: 0 0 10px 0;
   }
 a {
-  color: #6BAD5E;
+  color: #301305;
   text-decoration: none;
   }
   a:hover {
@@ -91,7 +91,7 @@ a {
     padding: 0 10px;
     }
 #sidebar {
-  background: #303030;
+  background: #ecefe6;
   position: absolute;
   width: 280px;
   height: 100%;
@@ -112,11 +112,11 @@ a {
 #layer-switcher li.active,
 .gradient {
   background-color: #202020;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#303030), to(#202020));
-  background-image: -webkit-linear-gradient(top, #303030, #202020);
-  background-image:    -moz-linear-gradient(top, #303030, #202020);
-  background-image:      -o-linear-gradient(top, #303030, #202020);
-  background-image:         linear-gradient(to bottom, #303030, #202020);  
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ecefe6), to(#202020));
+  background-image: -webkit-linear-gradient(top, #ecefe6, #202020);
+  background-image:    -moz-linear-gradient(top, #ecefe6, #202020);
+  background-image:      -o-linear-gradient(top, #ecefe6, #202020);
+  background-image:         linear-gradient(to bottom, #ecefe6, #202020);  
   }
 
 /* --------------------------------------------------------
@@ -179,7 +179,7 @@ h6.description {
     text-decoration: none;
     }
   #layer-switcher li:hover {
-    background-color: #292929;
+    background-color: #fa514c;
     }
   #layer-switcher li.active a.title {
     color: #eee;
@@ -211,7 +211,7 @@ h6.description {
 
 /* Notes */
 #sidebar .notes {
-  background: #303030;
+  background: #ecefe6;
   font-size: 11px;
   line-height: 18px;
   color: #656565;
@@ -241,7 +241,7 @@ h6.description {
     }
 
 #share {
-  background: #303030;
+  background: #ecefe6;
   top: 80px;
   right: 20px;
   position: absolute;
