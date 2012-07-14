@@ -70,7 +70,7 @@ a {
   Layout + Main component styling
 --------------------------------------------------------- */
 #map {
-  background-color: #000;
+  background-color: #fff;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -93,11 +93,11 @@ a {
 #sidebar {
   background: #ecefe6;
   position: absolute;
-  width: 280px;
-  height: 100%;
+  width: 170px;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 100;
+  opacity:.7;
   }
   #sidebar .inner {
     padding-top: 120px;
@@ -112,11 +112,11 @@ a {
 #layer-switcher li.active,
 .gradient {
   background-color: #202020;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ecefe6), to(#202020));
-  background-image: -webkit-linear-gradient(top, #ecefe6, #202020);
-  background-image:    -moz-linear-gradient(top, #ecefe6, #202020);
-  background-image:      -o-linear-gradient(top, #ecefe6, #202020);
-  background-image:         linear-gradient(to bottom, #ecefe6, #202020);  
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ecefe6), to(#b1b3ac));
+  background-image: -webkit-linear-gradient(top, #ecefe6, #b1b3ac);
+  background-image:    -moz-linear-gradient(top, #ecefe6, #b1b3ac);
+  background-image:      -o-linear-gradient(top, #ecefe6, #b1b3ac);
+  background-image:         linear-gradient(to bottom, #ecefe6, #b1b3ac);  
   }
 
 /* --------------------------------------------------------
