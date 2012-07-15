@@ -189,7 +189,7 @@ h1 {
   font-size: 25px;
   font-weight: 900;
   color: #000;
-  text-shadow: 0 -1px 0 #000;
+  text-shadow: 0 -1px 0 #eee;
   margin-bottom: 5px;
   }
 p {
@@ -222,7 +222,7 @@ a {
   -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   z-index: 5000;
-  background-color:#fff;
+  background-color:#eee;
   }
   #header .inner {
     padding: 20px 10px;
@@ -234,7 +234,7 @@ a {
   top: 30%;
   right: 10px;
   z-index: 100;
-  opacity:.7;
+  opacity:.8;
   }
   #sidebar .inner {
     padding-top: 20px;
@@ -317,7 +317,7 @@ h6.description {
     color: #2284ed;
     }
   #layer-switcher li .description {
-    background: #fff;
+    background: #eee;
     color: #404040;
     display: none;
     padding: 10px;
@@ -325,18 +325,19 @@ h6.description {
     top: 0;
     font-size: 13px;
     line-height: 18px;
-    left: 280px;
+    right: 180px;
     width: 140px;
     -moz-border-radius: 0 2px 2px 0;
     border-radius: 0 2px 2px 0;
+    opacity:1;
     }
     #layer-switcher .arrow {
       position: absolute;
-      left: -10px;
+      right: -10px;
       width: 0;
       height: 0;
       border-top: 10px solid transparent;
-      border-right: 10px solid #fff;
+      border-left: 10px solid #fff;
       border-bottom: 10px solid transparent;
       }
   #layer-switcher li.active .description { display: block; }
@@ -510,9 +511,9 @@ a.zoomer {
   padding: 10px;
   -webkit-user-select:auto;
   right: 20px;
-  top: 50px;
+  top: 80px;
   max-width: 300px;
-  opacity:.81;
+  opacity:.7;
   -webkit-transition:opacity 150ms;
   -moz-transition:opacity 150ms;
   -moz-border-radius: 2px;
