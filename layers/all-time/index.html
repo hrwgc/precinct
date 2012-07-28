@@ -5,11 +5,9 @@ layout: layers
 ---
 
 {% include JB/setup %}
-
     <div id='header' class='gradient'>
       <div class='inner'>
-        <h1 class='title'>Stop and Frisk</h1
-        <h6 class='description'>Explore stop and frisk density across time.</h6>
+        <h6 class='description'></h6>
         <a class='' href='#'></a>
       </div>
     </div>
@@ -18,20 +16,20 @@ layout: layers
         <div id='layer-switcher'>
           <ul>
 	         <li id='streets'>
-	   				<a class='title' data-layer='herwig.nyc-roads-all-stops'  href='#'>By Street Segment</a> <div class='description'><span class='arrow'>&nbsp;</span>This layer shows the frequency of stops by street segment for all stops from 2008-2011. It was calculated using the NYC DOITT's Roadbed and Street Centerlines Datasets.</div>
+	   				<a class='title' data-layer='herwig.map-0eo03co1,herwig.map-w1g29n7f,herwig.nyc-roads-all-stops'  href='#'>By Street Segment</a> <div class='description'><span class='arrow'>&nbsp;</span>This layer shows the frequency of stops by street segment for all stops from 2008-2011. It was calculated using the NYC DOITT's Roadbed and Street Centerlines Datasets.</div>
 	            </li>
             <li id='2008'>
-   				<a class='title' data-layer='herwig.map-olatzdh8,mapbox.world-borders-light,herwig.all-stops-2008,herwig.stop-and-frisk-contours-2008' href='#'>2008</a><div class='description'><span class='arrow'>&nbsp;</span>This layer shows all stops that occurred in 2008.</div>
+   				<a class='title' data-layer='herwig.map-0eo03co1,herwig.map-w1g29n7f,herwig.all-stops-2008,herwig.stop-and-frisk-contours-2008' href='#'>2008</a><div class='description'><span class='arrow'>&nbsp;</span>This layer shows all stops that occurred in 2008.</div>
             </li>
             <li id='2009'>
 			    <a class='title'
-data-layer='herwig.map-olatzdh8,mapbox.world-borders-light,herwig.all-stops-2009,herwig.stop-and-frisk-contours-2009'  href='#'>2009</a><div class='description'><span class='arrow'>&nbsp;</span>This layer shows all stops that occurred in 2009.</div>
+data-layer='herwig.map-0eo03co1,herwig.map-w1g29n7f,herwig.all-stops-2009,herwig.stop-and-frisk-contours-2009'  href='#'>2009</a><div class='description'><span class='arrow'>&nbsp;</span>This layer shows all stops that occurred in 2009.</div>
             </li>
             <li id='2010'>
-   				<a class='title' data-layer='herwig.map-olatzdh8,mapbox.world-borders-light,herwig.all-stops-2010,herwig.stop-and-frisk-contours-2010'  href='#'>2010</a><div class='description'><span class='arrow'>&nbsp;</span>This layer shows all stops that occurred in 2010.</div>
+   				<a class='title' data-layer='herwig.map-0eo03co1,herwig.map-w1g29n7f,herwig.all-stops-2010,herwig.stop-and-frisk-contours-2010'  href='#'>2010</a><div class='description'><span class='arrow'>&nbsp;</span>This layer shows all stops that occurred in 2010.</div>
             </li>
             <li id='2011'>
-   				<a class='title' data-layer='herwig.map-olatzdh8,mapbox.world-borders-light,herwig.all-stops-2011,herwig.stop-and-frisk-2011-contours'  href='#'>2011</a><div class='description'><span class='arrow'>&nbsp;</span>This layer shows all stops that occurred in 2011.</div>
+   				<a class='title' data-layer='herwig.map-0eo03co1,herwig.map-w1g29n7f,herwig.all-stops-2011,herwig.stop-and-frisk-2011-contours'  href='#'>2011</a><div class='description'><span class='arrow'>&nbsp;</span>This layer shows all stops that occurred in 2011.</div>
             </li>
         </ul>
 
@@ -39,6 +37,7 @@ data-layer='herwig.map-olatzdh8,mapbox.world-borders-light,herwig.all-stops-2009
         </div>
     </div>
     <div id='map' class='fullscreen'>
+		<div id='table'></div>
       <div id ='share'>
         <a href='#' class='share button'>Share</a>
       </div>

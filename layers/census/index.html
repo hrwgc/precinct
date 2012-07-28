@@ -1,0 +1,55 @@
+---
+title: "Census Blocks"
+description: ""
+layout: layers
+---
+
+{% include JB/setup %}
+    <div id='header' class='gradient'>
+      <div class='inner'>
+        <h6 class='description'></h6>
+        <a class='' href='#'></a>
+      </div>
+    </div>
+    <div id='sidebar'>
+      <div class='inner'>
+        <div id='layer-switcher'>
+          <ul>
+	<li id='race-census'>
+		<a class='title' data-layer='herwig.map-0eo03co1,herwig.map-w1g29n7f,herwig.nyc-census-demography' href='#'>2010 Census Demography</a>
+    </li>
+	   <li id='race-across-time'>
+   				<a class='title' data-layer='herwig.map-0eo03co1,herwig.map-w1g29n7f,herwig.race-by-census-blocks' href='#'>Stops by Race</a>
+            </li>
+            <li id='Census Blocks'>
+   				<a class='title' data-layer='herwig.map-0eo03co1,herwig.map-w1g29n7f,herwig.stop-and-frisk-census-blocks-2011'  href='#'>2011 Stops by Census Block</a>
+            </li>
+           <li id='all'>
+   				<a class='title' data-layer='herwig.map-0eo03co1,herwig.map-w1g29n7f'  href='#'>All</a>
+            </li>
+          </ul>
+        </div>
+        </div>
+    </div>
+    <div id='map' class='fullscreen'>
+	<div id='table'></div>
+      <div id ='share'>
+        <a href='#' class='share button'>Share</a>
+      </div>
+    </div>
+    <div class='modal share'>
+      <div class='modal-box'>
+      <a href='#' class='close button'>&times;</a>
+        <h2>Share</h2>
+        <div class='tilejson'>
+        <textarea></textarea>
+        <h3>TileJSON URL</h3>
+        Use with a TileJSON <a href='http://mapbox.com/wax/'>Wax</a> connector or the <a href='http://mapbox.com/mobile/'>MapBox iOS SDK</a>.
+        </div>
+        <div class='embed'>
+        <textarea></textarea>
+        <h3>Embed code</h3>
+        Copy and paste this HTML into your website or blog to show this map.
+        </div>
+      </div>
+    </div>
