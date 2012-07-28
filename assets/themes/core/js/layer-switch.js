@@ -31,6 +31,8 @@ $(function() {
             $('#attribution').empty().append(tilejson.attribution);
             $('#layer-switcher li').removeClass('active');
             $('#layer-switcher li#' + tilejson.handle).addClass('active');
+			$('.wax-tooltip').stop().fadeOut(100);
+		    			
         };
         updateUI(tilejson);
 

@@ -52,7 +52,7 @@
                             .map(MM_map)
                             .tilejson(t)
                             .on(wax.tooltip()
-                                .parent(MM_map.parent)
+                                .appendTo($('#table')
                                 .events()
                             );
                         break;
