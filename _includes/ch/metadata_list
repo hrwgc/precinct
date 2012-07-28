@@ -1,0 +1,14 @@
+# {% if metadata_list.first[0] == null %}
+    {% for metadata in metadata_list %} 
+    	<li><a href="{{ BASE_PATH }}{{ site.ch.metadata_path }}#{{ category }}-ref">
+    		{{ metadata | join: "/" }} <span>{{ site.metadata[metadata].size }}</span>
+    	</a></li>
+    {% endfor %}
+  {% else %}
+    {% for metadata in metadata_list %} 
+    	<li><a href="{{ BASE_PATH }}{{ site.ch.metadata_path }}#{{ metadata[0] }}-ref">
+    		{{ metadata[0] | join: "/" }} <span>{{ metadata[1].size }}</span>
+    	</a></li>
+    {% endfor %}
+{% assign metadata_list = nil %}
+# {% endif %}

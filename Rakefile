@@ -9,7 +9,11 @@ CONFIG = {
   'themes' => File.join(SOURCE, "_includes", "themes"),
   'layouts' => File.join(SOURCE, "_layouts"),
   'posts' => File.join(SOURCE, "_posts"),
+  'dataset' => File.join(SOURCE, "_posts/_data"),
+  'metadata' => File.join(SOURCE, "_posts/_metadata"),
   'post_ext' => "md",
+  "data_ext" => "md",
+  "metadata_ext" => "md",
   'theme_package_version' => "0.1.0"
 }
 
@@ -22,7 +26,9 @@ module JB
       :themes => "_includes/themes",
       :theme_assets => "assets/themes",
       :theme_packages => "_theme_packages",
-      :posts => "_posts"
+      :posts => "_posts",
+      :dataset => "_posts/_data",
+      :metadata => "_posts/_metadata"
     }
     
     def self.base
@@ -97,7 +103,7 @@ end # task :page
 
 desc "Launch preview environment"
 task :preview do
-  system "jekyll --auto --server"
+  system "jekyll auto --server --pygments"
 end # task :preview
 
 # Public: Alias - Maintains backwards compatability for theme switching.
