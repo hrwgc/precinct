@@ -5,12 +5,14 @@ description: ""
 category: metadata
 tags: [psql scripts, race, data definitions]
 api: ""
-parents: "a sample parent"
-sql: "my sql"
+parents: ""
+sql: ""
 shp: "sample shapefile"
 source: ""
 ---
 {% include JB/setup %}
+
+#### Create tables containing stop information by race of individual stopped
 
 {% highlight psql %}
 CREATE TEMPORARY TABLE t1 AS SELECT
