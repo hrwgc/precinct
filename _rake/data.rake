@@ -13,6 +13,10 @@ task :dataset do
   source = ENV["source"] || "#"
   category = ENV["category"] || "dataset"
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+  tags = tags.gsub(/^/,'
+   - ').gsub(/[,]{1}[ ]{0,1}/,'
+   - ')
+  
   begin
     date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
   rescue Exception => e
@@ -32,7 +36,7 @@ task :dataset do
     dataset.puts "title: \"#{title.gsub(/-/,' ')}\""
     dataset.puts "description: \"#{desc}\""
     dataset.puts "category: \"#{category}\""
-    dataset.puts "tags: \"#{tags}\""
+    dataset.puts "tags: #{tags}"
     dataset.puts "sql: \"#{sql}\""
     dataset.puts "shp: \"#{shp}\""
     dataset.puts "csv: \"#{csv}\""
@@ -60,6 +64,10 @@ task :metadata do
   source = ENV["source"] || "#"
   category = ENV["category"] || "metadata"
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+  tags = tags.gsub(/^/,'
+   - ').gsub(/[,]{1}[ ]{0,1}/,'
+   - ')
+
   begin
     date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
   rescue Exception => e
@@ -73,20 +81,20 @@ task :metadata do
   dataset = File.join(CONFIG['dataset'], "#{date}-#{slug}.#{CONFIG['data_ext']}")
   
   
-  puts "Creating new dataset: #{filename}"
+  puts "Creating new metadata page: #{filename}"
   open(filename, 'w') do |metadata|
     metadata.puts "---"
     metadata.puts "layout: post"
     metadata.puts "title: \"#{title.gsub(/-/,' ')}\""
     metadata.puts "description: \"#{desc}\""
-    metadata.puts "category: \"#{category}\""
-    metadata.puts "tags: \"#{tags}\""
+    metadata.puts "category: #{category}"
+    metadata.puts "tags: #{tags}"
     metadata.puts "api: \"#{api}\""
     metadata.puts "parents: \"#{parents}\""
     metadata.puts "sql: \"#{api}\""
     metadata.puts "shp: \"#{api}\""
     metadata.puts "source: \"#{source}\""
-    metadata.puts "data: \"{{BASE_PATH}}#{dataset.gsub(/^\./,'')}\""
+    metadata.puts "data: /precinct#{dataset.gsub(/^\./,'')}"
     metadata.puts "---"
     metadata.puts "{% include JB/setup %}"
   end

@@ -35,7 +35,7 @@
 	    <li><a href='{{ page.sql }}'>SQL Script</a></li>
 	  {% endunless %}  
 	  {% unless page.dataset == empty %}
-	    <li><a href='/precinct{{ page.url | replace: 'Metadata', 'Dataset' }}'>Dataset</a></li>
+	    <li><a href='/precinct{{ page.url | replace: 'metadata', 'dataset' }}'>Dataset</a></li>
       {% endunless %}  
  	 
 	 {% unless page.description == empty %}
