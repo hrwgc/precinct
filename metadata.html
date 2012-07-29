@@ -1,0 +1,21 @@
+---
+layout: page
+title : Metadata
+header : 
+group: navigation
+---
+{% include JB/setup %}
+{% include themes/core/data.html %}
+
+
+<ul class='data feed'>
+
+{% for category in post.categories.metadata %}
+   <li>
+	  <div class='data-container meta'>
+		<a class='data-link' id='{{meta.link}}' href='#'> {{meta.title}}</a>{{dataset.source}}
+	  </div>
+   </li>
+{% endfor %}
+
+</ul>

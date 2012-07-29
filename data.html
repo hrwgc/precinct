@@ -1,0 +1,21 @@
+---
+layout: page
+title : Data
+header : Post Archive
+group: navigation
+---
+{% include JB/setup %}
+{% include themes/core/data.html %}
+
+
+<ul class='data feed'>
+
+{% for data in site.categories.dataset %}
+   <li>
+	  <div class='data-container dataset'>
+		<a class='data-link' id='{{data.url}}' href='#'> {{data.title}}</a>{{dataset.source}}
+	  </div>
+   </li>
+{% endfor %}
+
+</ul>
