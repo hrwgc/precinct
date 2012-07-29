@@ -4,7 +4,7 @@
 
 <div class="row">
   <div class="span8">
-    {{ content }}
+    {{ content | markdownify }}
     <hr>
     <div class="pagination">
       <ul>
@@ -35,7 +35,7 @@
 	    <li><a href='{{ page.sql }}'>SQL Script</a></li>
 	  {% endunless %}  
 	  {% unless page.dataset == empty %}
-	    <li><a href='{{ page.url | replace: 'Metadata', 'Dataset' }}'>Dataset</a></li>
+	    <li><a href='/precinct{{ page.url | replace: 'Metadata', 'Dataset' }}'>Dataset</a></li>
       {% endunless %}  
  	 
 	 {% unless page.description == empty %}
