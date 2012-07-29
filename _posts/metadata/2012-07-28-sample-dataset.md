@@ -6,12 +6,12 @@ category: Metadata
 tags: [psql scripts, race, data definitions]
 api: ""
 parents: "a sample parent"
-sql: ""
-shp: ""
+sql: "my sql"
+shp: "myshapefile"
 source: "http://hotmail.com"
-data: "{{BASE_PATH}}/_posts/metadata/2012-07-28-sample-dataset.md"
 ---
 {% include JB/setup %}
+
 <div>
 	
 {% highlight psql %}

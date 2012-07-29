@@ -28,7 +28,7 @@ task :dataset do
   puts "Creating new dataset: #{filename}"
   open(filename, 'w') do |dataset|
     dataset.puts "---"
-    dataset.puts "layout: dataset"
+    dataset.puts "layout: post"
     dataset.puts "title: \"#{title.gsub(/-/,' ')}\""
     dataset.puts "description: \"#{desc}\""
     dataset.puts "category: \"#{category}\""
@@ -76,6 +76,7 @@ task :metadata do
   puts "Creating new dataset: #{filename}"
   open(filename, 'w') do |metadata|
     metadata.puts "---"
+    metadata.puts "layout: post"
     metadata.puts "title: \"#{title.gsub(/-/,' ')}\""
     metadata.puts "description: \"#{desc}\""
     metadata.puts "category: \"#{category}\""
