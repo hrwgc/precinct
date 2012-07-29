@@ -9,8 +9,8 @@ CONFIG = {
   'themes' => File.join(SOURCE, "_includes", "themes"),
   'layouts' => File.join(SOURCE, "_layouts"),
   'posts' => File.join(SOURCE, "_posts"),
-  'dataset' => File.join(SOURCE, "_posts/_data"),
-  'metadata' => File.join(SOURCE, "_posts/_metadata"),
+  'dataset' => File.join(SOURCE, "_posts/data"),
+  'metadata' => File.join(SOURCE, "_posts/metadata"),
   'post_ext' => "md",
   "data_ext" => "md",
   "metadata_ext" => "md",
@@ -27,8 +27,8 @@ module JB
       :theme_assets => "assets/themes",
       :theme_packages => "_theme_packages",
       :posts => "_posts",
-      :dataset => "_posts/_data",
-      :metadata => "_posts/_metadata"
+      :dataset => "_posts/data",
+      :metadata => "_posts/metadata"
     }
     
     def self.base
