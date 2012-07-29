@@ -12,9 +12,7 @@ source: "http://hotmail.com"
 ---
 {% include JB/setup %}
 
-<div>
-	
-{% highlight psql %}
+<div>{% highlight psql %}
 
 CREATE TEMPORARY TABLE t1 AS SELECT
 new_all.ogc_fid AS new_all_fid,
@@ -278,5 +276,4 @@ ON stops_by_block.new_all_fid = new_all.ogc_fid
 
 AND (new_all.race = 'X' OR new_all.race = 'Z' OR new_all.race = '');
 
-{% endhighlight %}
-</div>
+{% endhighlight %}</div>
