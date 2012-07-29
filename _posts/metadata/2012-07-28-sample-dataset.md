@@ -46,13 +46,9 @@ replace(replace(replace(new_all.sumissue,'N','2'),'Y','1'),'','4')  AS sumissue,
 replace(replace(replace(new_all.offunif,'N','2'),'Y','1'),'','4')  AS offunif,
 replace(replace(replace(new_all.frisked,'N','2'),'Y','1'),'','4')  AS frisked,
 replace(replace(replace(new_all.searched,'N','2'),'Y','1'),'','4')  AS searched
-
 FROM new_all
-
 LEFT JOIN stops_by_block
-
 ON stops_by_block.new_all_fid = new_all.ogc_fid
-
 AND new_all.race = 'B';
 {% endhighlight %}
 
@@ -60,7 +56,6 @@ AND new_all.race = 'B';
 CREATE TEMPORARY TABLE t2 AS SELECT
 new_all.ogc_fid AS new_all_fid,
 stops_by_block.census_fid AS census_fid,
-
 new_all.YEAR AS YEAR,
 regexp_replace(datestop,'([0-9]{1,2})([0-9]{2})([0-9]{4})','\1-\2-\3') AS datestop,
 replace(replace(replace(replace(sex,'F','2'),'M','1'),'Z','3'),'','4') AS sex,
@@ -89,13 +84,9 @@ replace(replace(replace(new_all.sumissue,'N','2'),'Y','1'),'','4')  AS sumissue,
 replace(replace(replace(new_all.offunif,'N','2'),'Y','1'),'','4')  AS offunif,
 replace(replace(replace(new_all.frisked,'N','2'),'Y','1'),'','4')  AS frisked,
 replace(replace(replace(new_all.searched,'N','2'),'Y','1'),'','4')  AS searched
-
 FROM new_all
-
 LEFT JOIN stops_by_block
-
 ON stops_by_block.new_all_fid = new_all.ogc_fid
-
 AND (new_all.race = 'P'
 OR new_all.race = 'Q');
 {% endhighlight %}
@@ -104,7 +95,6 @@ OR new_all.race = 'Q');
 CREATE TEMPORARY TABLE t3 AS SELECT
 new_all.ogc_fid AS new_all_fid,
 stops_by_block.census_fid AS census_fid,
-
 new_all.YEAR AS YEAR,
 regexp_replace(datestop,'([0-9]{1,2})([0-9]{2})([0-9]{4})','\1-\2-\3') AS datestop,
 replace(replace(replace(replace(sex,'F','2'),'M','1'),'Z','3'),'','4') AS sex,
@@ -133,13 +123,9 @@ replace(replace(replace(new_all.sumissue,'N','2'),'Y','1'),'','4')  AS sumissue,
 replace(replace(replace(new_all.offunif,'N','2'),'Y','1'),'','4')  AS offunif,
 replace(replace(replace(new_all.frisked,'N','2'),'Y','1'),'','4')  AS frisked,
 replace(replace(replace(new_all.searched,'N','2'),'Y','1'),'','4')  AS searched
-
 FROM new_all
-
 LEFT JOIN stops_by_block
-
 ON stops_by_block.new_all_fid = new_all.ogc_fid
-
 AND new_all.race = 'W';
 {% endhighlight %}
 
@@ -175,13 +161,9 @@ replace(replace(replace(new_all.sumissue,'N','2'),'Y','1'),'','4')  AS sumissue,
 replace(replace(replace(new_all.offunif,'N','2'),'Y','1'),'','4')  AS offunif,
 replace(replace(replace(new_all.frisked,'N','2'),'Y','1'),'','4')  AS frisked,
 replace(replace(replace(new_all.searched,'N','2'),'Y','1'),'','4')  AS searched
-
 FROM new_all
-
 LEFT JOIN stops_by_block
-
 ON stops_by_block.new_all_fid = new_all.ogc_fid
-
 AND new_all.race = 'A';
 {% endhighlight %}
 
@@ -217,13 +199,9 @@ replace(replace(replace(new_all.sumissue,'N','2'),'Y','1'),'','4')  AS sumissue,
 replace(replace(replace(new_all.offunif,'N','2'),'Y','1'),'','4')  AS offunif,
 replace(replace(replace(new_all.frisked,'N','2'),'Y','1'),'','4')  AS frisked,
 replace(replace(replace(new_all.searched,'N','2'),'Y','1'),'','4')  AS searched
-
 FROM new_all
-
 LEFT JOIN stops_by_block
-
 ON stops_by_block.new_all_fid = new_all.ogc_fid
-
 AND new_all.race = 'I';
 {% endhighlight %}
 
@@ -259,12 +237,8 @@ replace(replace(replace(new_all.sumissue,'N','2'),'Y','1'),'','4')  AS sumissue,
 replace(replace(replace(new_all.offunif,'N','2'),'Y','1'),'','4')  AS offunif,
 replace(replace(replace(new_all.frisked,'N','2'),'Y','1'),'','4')  AS frisked,
 replace(replace(replace(new_all.searched,'N','2'),'Y','1'),'','4')  AS searched
-
 FROM new_all
-
 LEFT JOIN stops_by_block
-
 ON stops_by_block.new_all_fid = new_all.ogc_fid
-
 AND (new_all.race = 'X' OR new_all.race = 'Z' OR new_all.race = '');
 {% endhighlight %}
