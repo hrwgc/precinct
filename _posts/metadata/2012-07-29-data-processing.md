@@ -12,7 +12,6 @@ source: ""
 data: "{{BASE_PATH}}/_posts/data/2012-07-29-data-processing.md"
 ---
 {% include JB/setup %}
-
 ## Grab NYC Precinct-level Crime Statistics
 
 #### Problem 1
@@ -83,7 +82,7 @@ Replace: \1\t\2
 
 - [PostgreSQL](http://www.postgresql.org/), [Documentation for PostgreSQL 9.1](http://www.postgresql.org/docs/9.1/)
 
-- You may want to view
+### You may want to view
 
 - [Installing PostgreSQL 9.1.3 on Mac OS X Lion](http://frombelvideres4thfloor.blogspot.com/2012/03/installing-postgresql-913-on-mac-os-x.html)
 
@@ -91,7 +90,7 @@ Replace: \1\t\2
 
 - [PostGIS](http://postgis.refractions.net)
 
-- Relevant Guides
+### Relevant Guides
 
 - [Documentation](http://postgis.refractions.net/docs/using_postgis_dbmanagement.html)
 
@@ -193,6 +192,7 @@ PROJCS["NAD83_New_York_Long_Island_ftUS",GEOGCS["GCS_North_American_1983",DATUM[
 {% highlight sql %}
 SELECT PostGIS_Full_Version();
 {% endhighlight %}
+
 Response:
 
 {% highlight sql %}
@@ -354,6 +354,6 @@ CREATE TABLE crime (  geoid varchar(11),
  total2011 integer);
 {% endhighlight %}
 
-{% highlight sql %}
+{% highlight sh %}
 cat 2011-2012-precinct-data-all.csv | bin/psql -d gis -c 'COPY crime FROM STDIN WITH CSV HEADER' 
 {% endhighlight %}
