@@ -68,6 +68,3 @@ html, body {
 	border:1px solid #4C964D;
 	color:#FFF;
 }
-
-pre code span { font-family: Menlo,Monaco,"Courier New",monospace; }
-code { padding-top: 10px; padding-bottom:10px;  padding-left: 50px; padding-right: 50px; }
