@@ -2,6 +2,21 @@
 layout: post
 title: "Data Processing"
 description: "early processing of the data to get it out of SPSS .por format"
+category: "metadata"
+tags: [data, documentation, processing, wget, r, hmisc, how-to, tutorial]
+api: ""
+parents: ""
+sql: ""
+shp: ""
+source: ""
+data: "{{BASE_PATH}}/_posts/data/2012-07-29-data-processing.md"
+---
+{% include JB/setup %}
+
+---
+layout: post
+title: "Data Processing"
+description: "early processing of the data to get it out of SPSS .por format"
 category:
 tags: [data, documentation, processing, wget, r, hmisc, how-to, tutorial]
 ---

@@ -7,13 +7,12 @@ tags: [psql scripts, race, data definitions]
 api: ""
 parents: "a sample parent"
 sql: "my sql"
-shp: "myshapefile"
-source: "http://hotmail.com"
+shp: "sample shapefile"
+source: ""
 ---
 {% include JB/setup %}
 
-<div>{% highlight psql %}
-
+{% highlight psql %}
 CREATE TEMPORARY TABLE t1 AS SELECT
 new_all.ogc_fid AS new_all_fid,
 stops_by_block.census_fid AS census_fid,
@@ -53,11 +52,9 @@ LEFT JOIN stops_by_block
 ON stops_by_block.new_all_fid = new_all.ogc_fid
 
 AND new_all.race = 'B';
-
 {% endhighlight %}
 
 {% highlight psql %}
-
 CREATE TEMPORARY TABLE t2 AS SELECT
 new_all.ogc_fid AS new_all_fid,
 stops_by_block.census_fid AS census_fid,
@@ -99,11 +96,9 @@ ON stops_by_block.new_all_fid = new_all.ogc_fid
 
 AND (new_all.race = 'P'
 OR new_all.race = 'Q');
-
 {% endhighlight %}
 
 {% highlight psql %}
-
 CREATE TEMPORARY TABLE t3 AS SELECT
 new_all.ogc_fid AS new_all_fid,
 stops_by_block.census_fid AS census_fid,
@@ -144,11 +139,9 @@ LEFT JOIN stops_by_block
 ON stops_by_block.new_all_fid = new_all.ogc_fid
 
 AND new_all.race = 'W';
-
 {% endhighlight %}
 
 {% highlight psql %}
-
 CREATE TABLE t4 AS SELECT
 new_all.ogc_fid AS new_all_fid,
 stops_by_block.census_fid AS census_fid,
@@ -191,7 +184,6 @@ AND new_all.race = 'A';
 {% endhighlight %}
 
 {% highlight psql %}
-
 CREATE TEMPORARY TABLE t5 AS SELECT
 new_all.ogc_fid AS new_all_fid,
 stops_by_block.census_fid,
@@ -231,11 +223,9 @@ LEFT JOIN stops_by_block
 ON stops_by_block.new_all_fid = new_all.ogc_fid
 
 AND new_all.race = 'I';
-
 {% endhighlight %}
 
 {% highlight psql %}
-
 CREATE  TABLE t6 AS SELECT
 new_all.ogc_fid AS new_all_fid,
 stops_by_block.census_fid AS census_fid,
@@ -275,5 +265,4 @@ LEFT JOIN stops_by_block
 ON stops_by_block.new_all_fid = new_all.ogc_fid
 
 AND (new_all.race = 'X' OR new_all.race = 'Z' OR new_all.race = '');
-
-{% endhighlight %}</div>
+{% endhighlight %}
