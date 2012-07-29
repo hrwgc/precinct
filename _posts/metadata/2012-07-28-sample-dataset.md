@@ -11,7 +11,6 @@ shp: "sample shapefile"
 source: ""
 ---
 {% include JB/setup %}
-
 #### Create tables containing stop information by race of individual stopped
 
 {% highlight sql %}

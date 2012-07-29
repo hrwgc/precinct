@@ -13,7 +13,6 @@ data: "{{BASE_PATH}}/_posts/data/2012-07-29-data-processing.md"
 ---
 {% include JB/setup %}
 ## Grab NYC Precinct-level Crime Statistics
-
 #### Problem 1
 
 - NYPD offers [crime data as pdf reports](http://www.nyc.gov/html/nypd/html/crime_prevention/crime_statistics.shtml) for each precinct as well as monthly one-page [citywide crime reports](http://www.nyc.gov/html/nypd/downloads/pdf/crime_statistics/cscity.pdf).
@@ -27,7 +26,7 @@ data: "{{BASE_PATH}}/_posts/data/2012-07-29-data-processing.md"
 
 2. View source of page, copy out the tables containing the ** .pdf ** files. Note that the links are relative.
 
-3. In a text editor, or Google Refine, or many other tools, remove all html formatting via regular expressions or other extraction methods. I used regex. My main searches included removing all **<tr><td></td></tr> ** elements. I also replaced all the target="..."> instances with \t, the end product [is available here](https://github.com/hrwgc/nyc/blob/gh-pages/data/crime-pdfs/nypd-crime-report-pdfs.csv)
+3. In a text editor, or Google Refine, or many other tools, remove all html formatting via regular expressions or other extraction methods. I used regex. My main searches included removing all html table elements. I also replaced all the target="..." instances with \t, the end product [is available here](https://github.com/hrwgc/nyc/blob/gh-pages/data/crime-pdfs/nypd-crime-report-pdfs.csv)
 
 4. Copy the first column and past it into a new text document, save as [download.txt](https://github.com/hrwgc/nyc/blob/gh-pages/data/crime-pdfs/pdf/download.txt)
 
@@ -60,9 +59,6 @@ cat * > combined.txt
 
 {% highlight sh %}
 Find: ([0-9a-zA-Z\.,\*\-]+)[ ]+([0-9a-zA-Z\.,\*\-]+)
-{% endhighlight %}
-
-{% highlight sh %}
 Replace: \1\t\2
 {% endhighlight %}
 
@@ -216,7 +212,6 @@ SELECT ST_SRID(geom) FROM mydb LIMIT 1;
 4\. Update SRID in PostGIS
 
 {% highlight sql %}
-psql -d gis
 SELECT UpdateGeometrySRID('mydb', 'geom', 2263);
 {% endhighlight %}
 
@@ -282,76 +277,76 @@ shp2pgsql -D -s 4326 -I nypd-precincts.shp precincts | psql -d gis
 
 {% highlight sql %}
 CREATE TABLE crime (  geoid varchar(11),
- precinct integer,
- fyburg93 integer,
- fyburg95 integer,
- fyburg98 integer,
- fyburg2001 integer,
- fyburg2011 integer,
- fypctfel integer,
- fyfelassault93 integer,
- fyfelassault95 integer,
- fyfelassault98 integer,
- fyfelassault2001 integer,
- fyfelassault2011 integer,
- fypctgla integer,
- fygla93 integer,
- fygla95 integer,
- fygla98 integer,
- fygla2001 integer,
- fygla2011 integer,
- fypctgrlarceny integer,
- fygrlarceny93 integer,
- fygrlarceny95 integer,
- fygrlarceny98 integer,
- fygrlarceny2001 integer,
- fygrlarceny2011 integer,
- fypctmurder integer,
- fymurder93 integer,
- fymurder95 integer,
- fymurder98 integer,
- fymurder2001 integer,
- fymurder2011 integer,
- fypctrape integer,
- fyrape93 integer,
- fyrape95 integer,
- fyrape98 integer,
- fyrape2001 integer,
- fyrape2011 integer,
- fypctrobbery integer,
- fyrobbery93 integer,
- fyrobbery95 integer,
- fyrobbery98 integer,
- fyrobbery2001 integer,
- fyrobbery2011 integer,
- fypcttotal integer,
- fytotal93 integer,
- fytotal95 integer,
- fytotal98 integer,
- fytotal2001 integer,
- fytotal2011 integer,
- burg2012 integer,
- burg2011 integer,
- felassault2012 integer,
- felassault2011 integer,
- gla2012 integer,
- gla2011 integer,
- grlarceny2012 integer,
- grlarceny2011 integer,
- misdassault2012 integer,
- misdassault2011 integer,
- misdsexcr2012 integer,
- misdsexce2011 integer,
- murder2012 integer,
- murder2011 integer,
- petlarceny2012 integer,
- petlarceny2011 integer,
- rape2012 integer,
- rape2011 integer,
- robbery2012 integer,
- robbery2011 integer,
- total2012 integer,
- total2011 integer);
+precinct integer,
+fyburg93 integer,
+fyburg95 integer,
+fyburg98 integer,
+fyburg2001 integer,
+fyburg2011 integer,
+fypctfel integer,
+fyfelassault93 integer,
+fyfelassault95 integer,
+fyfelassault98 integer,
+fyfelassault2001 integer,
+fyfelassault2011 integer,
+fypctgla integer,
+fygla93 integer,
+fygla95 integer,
+fygla98 integer,
+fygla2001 integer,
+fygla2011 integer,
+fypctgrlarceny integer,
+fygrlarceny93 integer,
+fygrlarceny95 integer,
+fygrlarceny98 integer,
+fygrlarceny2001 integer,
+fygrlarceny2011 integer,
+fypctmurder integer,
+fymurder93 integer,
+fymurder95 integer,
+fymurder98 integer,
+fymurder2001 integer,
+fymurder2011 integer,
+fypctrape integer,
+fyrape93 integer,
+fyrape95 integer,
+fyrape98 integer,
+fyrape2001 integer,
+fyrape2011 integer,
+fypctrobbery integer,
+fyrobbery93 integer,
+fyrobbery95 integer,
+fyrobbery98 integer,
+fyrobbery2001 integer,
+fyrobbery2011 integer,
+fypcttotal integer,
+fytotal93 integer,
+fytotal95 integer,
+fytotal98 integer,
+fytotal2001 integer,
+fytotal2011 integer,
+burg2012 integer,
+burg2011 integer,
+felassault2012 integer,
+felassault2011 integer,
+gla2012 integer,
+gla2011 integer,
+grlarceny2012 integer,
+grlarceny2011 integer,
+misdassault2012 integer,
+misdassault2011 integer,
+misdsexcr2012 integer,
+misdsexce2011 integer,
+murder2012 integer,
+murder2011 integer,
+petlarceny2012 integer,
+petlarceny2011 integer,
+rape2012 integer,
+rape2011 integer,
+robbery2012 integer,
+robbery2011 integer,
+total2012 integer,
+total2011 integer);
 {% endhighlight %}
 
 {% highlight sh %}

@@ -12,6 +12,7 @@ parents: ""
 sql: ""
 shp: ""
 source: "#"
+data: "#"
 ---
 {% include JB/setup %}
 ## Reference Documents
@@ -19,32 +20,25 @@ source: "#"
 [PostgreSQL Cheatsheet][3]
 [Using Regular Expressions in PostgreSQL][4]
 
------
+[1]: http://blog.enricostahn.com/2010/06/11/postgresql-add-primary-key-to-an-existing-table.html
+[2]: http://stackoverflow.com/questions/7460102/postgresql-using-a-subquery-to-update-multiple-column-values
+[3]: http://www.petefreitag.com/cheatsheets/postgresql/
+[4]: http://www.oreillynet.com/pub/a/databases/2006/02/02/postgresq_regexes.html?page=2
 
 # xcoord column maintenance
 
-## Remove wrongly values xcoord column values:
 
-{% highlight sql %}
-UPDATE 946155
-{% endhiglight %}
-
-### Response:
-
+## Remove wrongly valued xcoord column values:
 {% highlight sql %}
 nyclu=# update new_all SET xcoord = '' where xcoord ~* '\\N' OR xcoord ~* '[A-Z]{1,}';
 UPDATE 946155
 {% endhighlight %}
 
------
-
 ## Verify removal was successful
 
 {% highlight sql %}
 nyclu=# select xcoord from new_all where xcoord ~* '[A-Z]{1,}';
-
 xcoord
---------
 (0 rows)
 {% endhighlight %}
 
@@ -61,7 +55,6 @@ OR xcoord ~* '[ ]{1,}$';
 
 {% highlight sql %}
 nyclu=# update new_all set xcoord = replace(xcoord, ' ', '') where xcoord ~* '^[ ]{1,}' OR xcoord ~* '[ ]{1,}$';
-
 UPDATE 4259631
 {% endhighlight %}
 
@@ -70,7 +63,6 @@ UPDATE 4259631
 {% highlight sql %}
 nyclu=# select xcoord, ycoord from new_all where xcoord != '';
 xcoord     | ycoord
----------+---------
 1012304 | 0222651
 0987555 | 0214890
 0990313 | 0215177
@@ -82,8 +74,6 @@ xcoord     | ycoord
 1021547 | 0247314
 1010719 | 0186857
 {% endhighlight %}
-
-
 -----
 
 ### Make xcoord null if ycoord is null, ycoord null if xcoord null
@@ -91,7 +81,6 @@ xcoord     | ycoord
 - *based off of discussion on stackoverflow discussion on [PostgreSQL - Using a Subquery to Update Multiple Column Values][2]*
 
 {% highlight sql %}
-
 UPDATE new_all
 SET xcoord = '',
 ycoord = ''
@@ -104,7 +93,6 @@ OR xcoord = ''
 OR xcoord = '0'
 OR xcoord ~* '^0$'
 OR xcoord ~* '^[ ]{1,}$';
-
 {% endhighlight %}
 
 ### Response
@@ -114,12 +102,10 @@ nyclu=# update new_all SET xcoord = '', ycoord = ''
 where
 ycoord ~* '^[ ]{0,}[0]{0,}[ ]{0,}$'
 OR xcoord ~* '^[ ]{0,}[0]{0,}[ ]{0,}$';
-
 UPDATE 946320
 {% endhighlight %}
 
 ### Verify it was successful
-
 
 {% highlight sql %}
 nyclu=# select xcoord, ycoord from new_all
@@ -127,21 +113,15 @@ where ycoord ~* '^[ ]{1,}'
 OR ycoord ~* '[ ]{1,}$'
 OR ycoord ~* '^[ ]{0,}[0]{1,}[ ]{0,}$'
 limit 10;
-
 xcoord | ycoord
 --------+--------
 (0 rows)
 {% endhighlight %}
 
-
 #### Note: Why was this necessary?
 
 Some records only contain an xcoord and a '0' value for the ycoord.
 ![](https://img.skitch.com/20120707-dauj1s35uei5bks8puaji8k1n7.png)
-
-
-********
-
 
 # ycoord column maintenance
 
@@ -157,8 +137,6 @@ update new_all SET ycoord = '' where ycoord ~* '\\N' OR ycoord ~* '[A-Z]{1,}';
 nyclu=# update new_all SET ycoord = '' where ycoord ~* '\\N' OR ycoord ~* '[A-Z]{1,}';
 UPDATE 946266
 {% endhighlight %}
-
------
 
 ## Remove leading and trailing white space
 
@@ -178,19 +156,13 @@ UPDATE 675555
 {% highlight sql %}
 nyclu=# select ycoord from new_all where ycoord ~* '^[ ]{1,}' OR ycoord ~* '[ ]{1,}$';
 ycoord
---------
 (0 rows)
 {% endhighlight %}
 
 -----
 
-<!-- update new_all set xcoord =     replace(xcoord, ' ', ''); where xcoord ~* '^[ ]{1,}' OR xcoord ~* '[ ]{1,}$';
-update new_all set ycoord =     replace(ycoord, ' ', '') where ycoord ~* '^[ ]{1,}' OR ycoord ~* '[ ]{1,}$';
-update new_all SET ycoord = '' where xcoord = '' or xcoord = '0' or xcoord = 0;
-update new_all SET xcoord = '' where ycoord = '' or ycoord = '0' or ycoord = 0; -->
-
-
 # Add better latitude / longitude pairs
+
 
 ## Create new geometry column (lat\_lon) in table new\_all for reprojected lat/lons
 
@@ -198,13 +170,11 @@ update new_all SET xcoord = '' where ycoord = '' or ycoord = '0' or ycoord = 0; 
 SELECT AddGeometryColumn ('public','new_all','lat_lon',4326,'POINT',2);
 {% endhiglight %}
 
-
 ## Create geom column with geometry from original xcoord/ycoord in NY State Plane projection (EPSG:2263)
 
 {% highlight sql %}
 nyclu=# SELECT AddGeometryColumn ('public','new_all','geom',2263,'POINT',2);
 addgeometrycolumn
---------------------------------------------------
 public.new_all.geom SRID:2263 TYPE:POINT DIMS:2
 (1 row)
 {% endhighlight %}
@@ -215,9 +185,7 @@ public.new_all.geom SRID:2263 TYPE:POINT DIMS:2
 UPDATE new_all SET geom = ST_GeomFromText('POINT('|| xcoord ||' ' || ycoord || ')', 2263) WHERE coalesce(trim(xcoord),'') <> '' AND coalesce(trim(ycoord),'') <> '';
 {% endhighlight %}
 
-
 ## Populate lat_lon with geometry from unprojected WGS84 lat/lon
-
 
 {% highlight sql %}
 UPDATE new_all SET lat_lon = ST_Transform(ST_GeomFromText('POINT('|| xcoord ||' ' || ycoord || ')', 2263), 4326)
@@ -231,7 +199,6 @@ AND coalesce(trim(ycoord),'')     <> '';
 nyclu=# UPDATE new_all SET lat_lon = ST_Transform(ST_GeomFromText('POINT('|| xcoord ||' ' || ycoord || ')', 2263), 4326)
 WHERE coalesce(trim(xcoord),'')     <> ''
 AND coalesce(trim(ycoord),'')     <> '';
-
 UPDATE 3313111
 {% endhighlight %}
 
@@ -248,7 +215,6 @@ nyclu=# CREATE INDEX ix_lat_lon ON new_all USING GIST (lat_lon);
 CREATE INDEX
 {% endhighlight %}
 
-
 ## Retroactively assign primary key to existing postgres database
 
 - *Thank you to Enrico Stahn for the [excellent tutorial][1]*
@@ -264,9 +230,7 @@ UPDATE 4259631
 
 {% highlight sql %}
 nyclu=# select id, pct from new_all where pct = '5' limit 10;
-
 id     | pct
----------+-----
 5135229 | 5
 5135463 | 5
 5136117 | 5
@@ -280,13 +244,10 @@ id     | pct
 (10 rows)
 {% endhighlight %}
 
-
-
 {% highlight sql %}
 ALTER TABLE "public"."new_all"
 ALTER COLUMN "id" SET DEFAULT nextval('"public"."new_all_id_seq"');
 {% endhighlight %}
-
 {% highlight sql %}
 ALTER TABLE "public"."new_all" ALTER COLUMN "id" SET NOT NULL;
 ALTER TABLE "public"."new_all" ADD UNIQUE ("id");
@@ -323,9 +284,7 @@ SELECT 3313111
 {% endhiglight %}
 
 - This reveals that we have latitude/longitude pairs for 3,313,111 of the 4.4 million + records. The addition of geospatial information to the database came around 2006.
-
 I can use the new condensed table in TileMill and not have to deal with filtering through to the records containing coordinates. I will add a new index to speed it up a bit more.
-
 
 {% highlight sql %}
 nyclu=# CREATE INDEX ix_coord_orig ON coord_conv USING GIST (lat_lon);
@@ -333,14 +292,11 @@ nyclu=# CREATE INDEX ix_coord_orig ON coord_conv USING GIST (lat_lon);
 
 ## Remove Antarctica points
 
-
 ### Why
 
 {% highlight sql %}
 nyclu=# select ogc_fid, lat_lon, ST_x(lat_lon) as latitude, ST_y(lat_lon) as longitude from new_all where xcoord <> '' and ycoord <> '' and lat_lon <> '' limit 10;
-
 ogc_fid |                      lat_lon                       |     latitude      |    longitude
----------+----------------------------------------------------+-------------------+------------------
 2634374 | 0101000020E610000059AB35C4257B52C05045FE55776E4440 | -73.9241800808062 | 40.8630168429905
 2634575 | 0101000020E6100000F89F04C6127252C035FC0E43815A4440 | -73.7823958439984 | 40.7070697615785
 2642142 | 0101000020E6100000E1FBE473047352C02E01FAC18C5A4440 | -73.7971467720195 | 40.7074205847479
@@ -354,12 +310,10 @@ ogc_fid |                      lat_lon                       |     latitude     
 (10 rows)
 {% endhighlight %}
 
-
 {% highlight sql %}
 nyclu=# select * from coord_conv
 nyclu-#  WHERE ogc_fid IN ( SELECT ogc_fid FROM new_all WHERE (new_all.xcoord = '' OR new_all.ycoord = '')) limit 10;
 ogc_fid |                      lat_lon                       |     latitude      |    longitude     | race | year | datestop | timestop | pct
----------+----------------------------------------------------+-------------------+------------------+------+------+----------+----------+-----
 871548 | 0101000020E61000004D7FEBCAF73353C0AFC8F035E6104440 | -76.8119990634707 | 40.1320254731848 | B    | 2010 | 4202010  | 1245     | 1
 883797 | 0101000020E61000009E2DC9632D3253C0802937B2FC104440 | -76.7840203728324 | 40.1327116746279 | B    | 2010 | 4252010  | 1238     | 6
 686069 | 0101000020E6100000B6D9F4BF813153C0D229B40E05114440 | -76.7735443011396 | 40.1329668407158 | B    | 2010 | 1012010  | 430      | 10
@@ -373,15 +327,8 @@ ogc_fid |                      lat_lon                       |     latitude     
 (10 rows)
 {% endhighlight %}
 
-
 {% highlight sql %}
 nyclu=#  DELETE FROM coord_conv
 nyclu-#     WHERE ogc_fid IN ( SELECT ogc_fid FROM new_all WHERE (ST_IsEmpty(lat_lon) = false AND (new_all.xcoord = '' OR new_all.ycoord = '')));
-
 DELETE 46
 {% endhighlight %}
-
-[1]:http://blog.enricostahn.com/2010/06/11/postgresql-add-primary-key-to-an-existing-table.html
-[2]:http://stackoverflow.com/questions/7460102/postgresql-using-a-subquery-to-update-multiple-column-values
-[3]:http://www.petefreitag.com/cheatsheets/postgresql/
-[4]:http://www.oreillynet.com/pub/a/databases/2006/02/02/postgresq_regexes.html?page=2
