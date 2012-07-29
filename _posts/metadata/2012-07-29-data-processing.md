@@ -182,7 +182,7 @@ write.table(frisk2008.df, "~/{path}/nypd2008.csv", quote = FALSE, sep = ";")
 
 1\. shp2pgsql did not add the SRID information for the database from the .prj file. The prj file contained the following projection information:
 
-{% highlight psql %}
+{% highlight sql %}
 PROJCS["NAD83_New_York_Long_Island_ftUS",GEOGCS["GCS_North_American_1983",DATUM["D_North_American_1983",SPHEROID["GRS_1980",6378137,298.257222101]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Lambert_Conformal_Conic"],PARAMETER["standard_parallel_1",41.03333333333333],PARAMETER["standard_parallel_2",40.66666666666666],PARAMETER["latitude_of_origin",40.16666666666666],PARAMETER["central_meridian",-74],PARAMETER["false_easting",984250.0000000002],PARAMETER["false_northing",0],UNIT["Foot_US",0.30480060960121924]]
 {% endhighlight %}
 
@@ -190,12 +190,12 @@ PROJCS["NAD83_New_York_Long_Island_ftUS",GEOGCS["GCS_North_American_1983",DATUM[
 
 2\. Verify you have PROJ4:
 
-{% highlight psql %}
+{% highlight sql %}
 SELECT PostGIS_Full_Version();
 {% endhighlight %}
 Response:
 
-{% highlight psql %}
+{% highlight sql %}
 postgis_full_version
 --------------------------------------------------------------------------------------------------------------------------------------------
 POSTGIS="2.0.0 r9605" GEOS="3.3.2-CAPI-1.7.2" PROJ="Rel. 4.8.0, 6 March 2012" GDAL="GDAL 1.9.0, released 2011/12/29" 
@@ -206,7 +206,7 @@ LIBXML="2.7.3" RASTER
 
 3\. Check to see if the SRID information made it into the database; see [OSGEO Workshop article](http://workshops.opengeo.org/postgis-intro/projection.html) for additional help.
 
-{% highlight psql %}
+{% highlight sql %}
 SELECT ST_SRID(geom) FROM mydb LIMIT 1;
 {% endhighlight %}
 
@@ -215,7 +215,7 @@ SELECT ST_SRID(geom) FROM mydb LIMIT 1;
 
 4\. Update SRID in PostGIS
 
-{% highlight psql %}
+{% highlight sql %}
 psql -d gis
 SELECT UpdateGeometrySRID('mydb', 'geom', 2263);
 {% endhighlight %}
@@ -224,11 +224,11 @@ SELECT UpdateGeometrySRID('mydb', 'geom', 2263);
 
 5\. To transform from State Plane to latitude/longitude (wgs84): See [OpenGeo Workshop for additional information](http://workshops.opengeo.org/postgis-intro/projection.html)
 
-{% highlight psql %}
+{% highlight sql %}
 SELECT srtext FROM spatial_ref_sys WHERE srid = 4326;
 {% endhighlight %}
 
-{% highlight psql %}
+{% highlight sql %}
 SELECT ST_AsText(ST_Transform(geom,4326))
 FROM mytable
 WHERE XCOORD IS NOT NULL; 
@@ -237,7 +237,7 @@ WHERE XCOORD IS NOT NULL;
 Set the SRID after the fact(?)
 
 
-{% highlight psql %}
+{% highlight sql %}
 SELECT ST_AsText(ST_Transform(ST_SetSRID(geom,2263),4326))FROM geometries;
 {% endhighlight %}
 
@@ -245,7 +245,7 @@ SELECT ST_AsText(ST_Transform(ST_SetSRID(geom,2263),4326))FROM geometries;
 6\. Make new column with WGS84 coordinates: (Adapted from [Cartometric](http://cartometric.com/blog/2011/11/19/prepare-a-shapefile-for-openscales-using-ogr2ogr-and-postgresql/))
 
 
-{% highlight psql %}
+{% highlight sql %}
 ALTER TABLE mytable ADD COLUMN wgs_geom GEOMETRY;
 UPDATE mytable SET wgs_geom = ST_Transform(geom, 4326);
 {% endhighlight %}
@@ -254,7 +254,7 @@ UPDATE mytable SET wgs_geom = ST_Transform(geom, 4326);
 7\. Verify the coordinate transformation was successful:
 
 
-{% highlight psql %}
+{% highlight sql %}
 SELECT ST_SRID(wgs_geom) FROM mytable; 
 {% endhighlight %}
 
@@ -280,7 +280,7 @@ shp2pgsql -D -s 4326 -I nypd-precincts.shp precincts | psql -d gis
 
 9\. Import crime data csv
 
-{% highlight psql %}
+{% highlight sql %}
 CREATE TABLE crime (  geoid varchar(11),
  precinct integer,
  fyburg93 integer,
@@ -354,6 +354,6 @@ CREATE TABLE crime (  geoid varchar(11),
  total2011 integer);
 {% endhighlight %}
 
-{% highlight psql %}
+{% highlight sql %}
 cat 2011-2012-precinct-data-all.csv | bin/psql -d gis -c 'COPY crime FROM STDIN WITH CSV HEADER' 
 {% endhighlight %}
