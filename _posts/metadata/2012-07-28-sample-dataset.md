@@ -14,7 +14,7 @@ source: ""
 
 #### Create tables containing stop information by race of individual stopped
 
-{% highlight psql %}
+{% highlight sql %}
 CREATE TEMPORARY TABLE t1 AS SELECT
 new_all.ogc_fid AS new_all_fid,
 stops_by_block.census_fid AS census_fid,
@@ -52,7 +52,7 @@ ON stops_by_block.new_all_fid = new_all.ogc_fid
 AND new_all.race = 'B';
 {% endhighlight %}
 
-{% highlight psql %}
+{% highlight sql %}
 CREATE TEMPORARY TABLE t2 AS SELECT
 new_all.ogc_fid AS new_all_fid,
 stops_by_block.census_fid AS census_fid,
@@ -91,7 +91,7 @@ AND (new_all.race = 'P'
 OR new_all.race = 'Q');
 {% endhighlight %}
 
-{% highlight psql %}
+{% highlight sql %}
 CREATE TEMPORARY TABLE t3 AS SELECT
 new_all.ogc_fid AS new_all_fid,
 stops_by_block.census_fid AS census_fid,
@@ -129,7 +129,7 @@ ON stops_by_block.new_all_fid = new_all.ogc_fid
 AND new_all.race = 'W';
 {% endhighlight %}
 
-{% highlight psql %}
+{% highlight sql %}
 CREATE TABLE t4 AS SELECT
 new_all.ogc_fid AS new_all_fid,
 stops_by_block.census_fid AS census_fid,
@@ -167,7 +167,7 @@ ON stops_by_block.new_all_fid = new_all.ogc_fid
 AND new_all.race = 'A';
 {% endhighlight %}
 
-{% highlight psql %}
+{% highlight sql %}
 CREATE TEMPORARY TABLE t5 AS SELECT
 new_all.ogc_fid AS new_all_fid,
 stops_by_block.census_fid,
@@ -205,7 +205,7 @@ ON stops_by_block.new_all_fid = new_all.ogc_fid
 AND new_all.race = 'I';
 {% endhighlight %}
 
-{% highlight psql %}
+{% highlight sql %}
 CREATE  TABLE t6 AS SELECT
 new_all.ogc_fid AS new_all_fid,
 stops_by_block.census_fid AS census_fid,
