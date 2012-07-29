@@ -2,7 +2,7 @@
 layout: post
 title: "sample dataset"
 description: ""
-category: Dataset
+category: dataset
 tags: [arm, left]
 sql: ""
 shp: ""

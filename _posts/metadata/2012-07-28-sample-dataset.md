@@ -1,8 +1,8 @@
 ---
-layout: metadata
+layout: post
 title: "Race Data Tables"
 description: ""
-category: Metadata
+category: metadata
 tags: [psql scripts, race, data definitions]
 api: ""
 parents: "a sample parent"
