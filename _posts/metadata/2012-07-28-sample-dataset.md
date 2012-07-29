@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: metadata
 title: "Race Data Tables"
 description: ""
 category: Metadata

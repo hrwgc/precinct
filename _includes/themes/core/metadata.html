@@ -1,0 +1,36 @@
+<div id='span8'>
+{{ content }}
+</div>
+<div class="span4">
+  <h4>Published</h4>
+  <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
+  </div>
+	    <h4>Data</h4>
+	    <ul class="tag_box">
+	  {% unless page.sql == empty %}
+	    <li><a href='{{ page.sql }}'>SQL Script</a></li>
+	  {% endunless %}  
+	  {% unless page.dataset == empty %}
+	    <li><a href='/precinct{{ page.url | replace: 'Metadata', 'Dataset' }}'>Dataset</a></li>
+    {% endunless %}  
+	 
+	 {% unless page.description == empty %}
+	    <li><a href='{{ page.sql }}'>SQL Script</a></li>
+	  {% endunless %}  
+
+	  {% unless page.shp == empty %}
+	    <li><a href='{{ page.shp }}'>Shapefile</a></li>
+    {% endunless %}  
+	  {% unless page.parents == empty %}
+	    <li><h4>Parents:</h4>{{ page.parents }}</li>
+    {% endunless %}  
+
+     </ul>
+	  {% unless page.tags == empty %}
+	    <h4>Tags</h4>
+	    <ul class="tag_box">
+	    {% assign tags_list = page.tags %}
+	    {% include JB/tags_list %}
+	    </ul>
+	  {% endunless %}  
+	  </div>
