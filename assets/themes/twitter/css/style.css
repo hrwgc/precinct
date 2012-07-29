@@ -68,4 +68,6 @@ html, body {
 	border:1px solid #4C964D;
 	color:#FFF;
 }
-	
+
+pre code span { font-family: Menlo,Monaco,"Courier New",monospace; }
+code { padding: 10px; }

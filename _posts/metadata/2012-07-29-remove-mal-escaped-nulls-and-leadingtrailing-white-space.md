@@ -5,7 +5,7 @@ description: ""
 category: metadata
 tags: 
    - PostGIS
-   - SQL script
+   - psql script
    - data processing
 api: ""
 parents: "[]"
