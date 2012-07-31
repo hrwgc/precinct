@@ -142,7 +142,7 @@ UPDATE 946266
 
 {% highlight sql %}
 update new_all set ycoord =     replace(ycoord, ' ', '') where ycoord ~* '^[ ]{1,}' OR ycoord ~* '[ ]{1,}$';
-{% endhiglight %}
+{% endhighlight %}
 
 ### Response
 
@@ -168,7 +168,7 @@ ycoord
 
 {% highlight sql %}
 SELECT AddGeometryColumn ('public','new_all','lat_lon',4326,'POINT',2);
-{% endhiglight %}
+{% endhighlight %}
 
 ## Create geom column with geometry from original xcoord/ycoord in NY State Plane projection (EPSG:2263)
 
@@ -206,7 +206,7 @@ UPDATE 3313111
 
 {% highlight sql %}
 CREATE INDEX ix_lat_lon ON new_all USING GIST (lat_lon);
-{% endhiglight %}
+{% endhighlight %}
 
 ### Response
 
@@ -281,14 +281,14 @@ OR lat_lon <> '';
 
 {% highlight sql %}
 SELECT 3313111
-{% endhiglight %}
+{% endhighlight %}
 
 - This reveals that we have latitude/longitude pairs for 3,313,111 of the 4.4 million + records. The addition of geospatial information to the database came around 2006.
 I can use the new condensed table in TileMill and not have to deal with filtering through to the records containing coordinates. I will add a new index to speed it up a bit more.
 
 {% highlight sql %}
 nyclu=# CREATE INDEX ix_coord_orig ON coord_conv USING GIST (lat_lon);
-{% endhiglight %}
+{% endhighlight %}
 
 ## Remove Antarctica points
 
