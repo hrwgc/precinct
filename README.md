@@ -1,19 +1,18 @@
----
-layout: post
-category : background
-tags : data
----
-{% include JB/setup %}
-
-##Stopping the Frisking
+          ------------------------------------------------------------------------------------------------------
+          --....---......---....---.....-------....---..--..--.....------......--.....---......---....---..--..-
+          -..--------..----..--..--..--..-----..--..--...-..--..--..-----..------..--..----..----..------..-..--
+          --....-----..----..--..--.....------......--..-...--..--..-----....----.....-----..-----....---....---
+          -----..----..----..--..--..---------..--..--..--..--..--..-----..------..--..----..--------..--..-..--
+          --....-----..-----....---..---------..--..--..--..--.....------..------..--..--......---....---..--..-
+          ------------------------------------------------------------------------------------------------------
 
 *See full project ideas [here](https://github.com/hrwgc/nyc/blob/gh-pages/_posts/project.md)*
 
 *Note:This project is a continuation of previous work, see [here](http://wiki.datawithoutborders.cc/index.php?title=Project:Current_events:NYC_DD:NYCLU) for work done at Data Dive NYC*
 
-*****
-
 *It was also inspired by Naomi Robbin's work with [crime and stop and frisk data](http://www.forbes.com/sites/naomirobbins/2012/03/23/visualizing-stop-and-frisk-and-murder-rates-in-new-york-city/).*
+
+****
 
 ![Race Contour Lines](https://github.com/hrwgc/precinct/raw/gh-pages/assets/themes/core/css/img/race-contour-lines.png)
 
