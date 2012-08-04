@@ -1,6 +1,6 @@
-{% include JB/setup %}
 <script type="text/javascript">
-{% raw %}function mmg_google_docs(id, callback) {
+
+function mmg_google_docs(id, callback) {
     if (typeof reqwest === "undefined") {
     throw "CSV: reqwest required for mmg_csv_url";
     }
@@ -21,7 +21,93 @@
             coordinates: []
         },
           properties: {
-            title:{% endraw %}{% for col in page.cols limit:1 %}{% raw %}'<h3 class="int-primary"{% endraw %}id="{{ col }}-ref"{% raw %}>'{% endraw %}{% if page.col-title != empty %}{% for title in page.col-title limit:1 %}+ "{{ title }}{% raw %}<span class="int-value">'{% endraw %}{% endfor %}{% else %}+ "{{ col }}{% raw %}<span class="int-value">'{% endraw %}{% endif %}+ entry.gsx${{ col }}.$t{% raw %}+ '</span></h3>'{% endraw %}{% endfor %}{% for col in page.cols offset:1 %}{% raw %}+ '<h3 class="int-primary"{% endraw %}id="{{ col }}-ref"{% raw %}>'{% endraw %}{% if page.col-title != empty %}{% for title in page.col-title offset:1 %}+ '{{ title }}{% raw %}<span class="int-value">'{% endraw %}{% endfor %}{% else %}+ '{{ col }}{% raw %}<span class="int-value">'{% endraw %}{% endif %}+ entry.gsx${{ col }}.$t{% raw %}+ '</span></h3>',{% endraw %}{% endfor %}{% if page.marker-color == empty %}"marker-color": entry.gsx$color.$t,{% else %}"marker-color": {{ page.marker-color }},{% endif %}{% if page.marker-symbol == empty %}"marker-symbol": entry.gsx$symbol.$t,{% else %}"marker-symbol": {{ page.marker-symbol }},{% endif %}{% if page.marker-size == empty %}"marker-size": entry.gsx$size.$t{% else %}"marker-size": {{ page.marker-size }}{% endif %}{% raw %}}
+            title:
+
+
+    {% for col in page.cols limit:1 %}
+                
+
+				'<h3 class="int-primary"
+				
+
+
+				id="{{ col }}-ref"
+				
+
+				>'
+
+    {% if page.col-title != empty %}
+        {% for title in page.col-title limit:1 %}
+                 + "{{ title }} 
+
+<span class="int-value">'
+
+
+        {% endfor %}
+    {% else %}
+                + "{{ col }} 
+
+<span class="int-value">'
+
+
+    {% endif %}
+                 + entry.gsx${{ col }}.$t
+               
+
+ + '</span></h3>' 
+
+
+    {% endfor %}
+    {% for col in page.cols offset:1 %}
+                
+
+ + '<h3 class="int-primary" 
+
+ id="{{ col }}-ref" 
+
+>'
+
+
+    {% if page.col-title != empty %}
+        {% for title in page.col-title offset:1 %}
+                + '{{ title }} 
+
+ <span class="int-value">' 
+
+
+        {% endfor %}            
+    {% else %}
+                + '{{ col }} 
+
+<span class="int-value">'
+
+
+    {% endif %}
+                + entry.gsx${{ col }}.$t
+               
+
+ + '</span></h3>',
+
+
+    {% endfor %}
+    {% if page.marker-color == empty %}
+            "marker-color": entry.gsx$color.$t,
+    {% else %}
+            "marker-color": {{ page.marker-color }},
+    {% endif %}
+    {% if page.marker-symbol == empty %}
+            "marker-symbol": entry.gsx$symbol.$t,
+    {% else %}
+            "marker-symbol": {{ page.marker-symbol }},
+    {% endif %}
+    {% if page.marker-size == empty %}
+            "marker-size": entry.gsx$size.$t
+    {% else %}
+            "marker-size": {{ page.marker-size }}
+    {% endif %}
+    
+
+        }
         };
         for (var y in entry) {
         if (y === latfield) feature.geometry.coordinates[1] = parseFloat(entry[y].$t);
@@ -44,8 +130,10 @@
     error: response
     });
 }
-{% endraw %}{% if page.scale == "true" %}
-var scale_factory_cache = {};
+
+
+{% if page.scale == "true" %}
+    var scale_factory_cache = {};
     function scale_factory(feature) {
     var dim = Math.round(+feature.properties.{{ page.cols[1] }} / 1200);
     if (!scale_factory_cache[dim]) {
@@ -73,16 +161,28 @@ var scale_factory_cache = {};
         "margin-top:" + (-dim/2) + "px;" +
         "position:absolute";
     return el;
-    }{% endif %}{% unless page.api == empty %}wax.tilejson("http://a.tiles.mapbox.com/v3/{{ page.api }}.jsonp",
+    }
+{% endif %}
+{% unless page.api == empty %}
+     wax.tilejson("http://a.tiles.mapbox.com/v3/{{ page.api }}.jsonp",
        function(tj) {
-     var m = new MM.Map("map", new wax.mm.connector(tj));{% unless page.gdoc == empty %}mmg_google_docs("{{ page.gdoc }}", function(features) {
+     var m = new MM.Map("map", new wax.mm.connector(tj));
+   {% unless page.gdoc == empty %}
+         mmg_google_docs("{{ page.gdoc }}", function(features) {
          var types = {};
          types.All = true;
          features = features.map(function(f) {
              f.properties.title = f.properties.title,
              types[f.properties.title] = true;
              return f;
-         });{% endunless %}{% endunless %}var ml = mapbox.markers.layer(){% if page.scale == "true" %}.factory(scale_factory){% endif %}.features(features);
+         });
+   {% endunless %}
+{% endunless %}  
+         var ml = mapbox.markers.layer()
+{% if page.scale == "true" %}
+         .factory(scale_factory)
+{% endif %}
+         .features(features);
          m.addLayer(ml);
          m.extent(ml.extent());
          mapbox.markers.interaction(ml);

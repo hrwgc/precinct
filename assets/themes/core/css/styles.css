@@ -2,7 +2,7 @@ pre code span { font-family: Menlo, Monaco,"Courier New",monospace; }
 pre code { display:block; padding-top: 10px; padding-bottom:10px;  padding-left: 50px; padding-right: 50px; }
 h1,h2,h3,h4,h5,h6{margin:0;font-weight:regular;color:#333333;text-rendering:optimizelegibility;}h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{font-weight:regular;color:#999999;}
 
-ul.tag_box {
+ul.tag_box.cloud {
 	height:800px;
 }
 .tag_box a {

@@ -11,6 +11,7 @@ CONFIG = {
   'posts' => File.join(SOURCE, "_posts"),
   'dataset' => File.join(SOURCE, "_posts/data"),
   'metadata' => File.join(SOURCE, "_posts/metadata"),
+  'map' => File.join(SOURCE, "_posts/maps"),
   'post_ext' => "md",
   "data_ext" => "md",
   "metadata_ext" => "md",
@@ -28,7 +29,8 @@ module JB
       :theme_packages => "_theme_packages",
       :posts => "_posts",
       :dataset => "_posts/data",
-      :metadata => "_posts/metadata"
+      :metadata => "_posts/metadata",
+      :map => "_posts/maps",
     }
     
     def self.base

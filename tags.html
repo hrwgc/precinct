@@ -6,7 +6,7 @@ group: navigation
 ---
 {% include JB/setup %}
 
-<ul class="tag_box inline">
+<ul class="tag_box inline cloud">
   {% assign tags_list = site.tags %}  
   {% include JB/tags_list %}
 </ul>
@@ -32,9 +32,11 @@ $(document).ready(function() {
     t = 0;
   $("ul.tag_box.inline li").each(function(index) {
          size = parseInt($(this).attr('val'),10);
-         h = size*10;
+         h = size*20 + 5;
          t = size*20;      
           $(this).css("font-size", t + "pt");
+          $(this).css("line-height", h + "pt");
+
     });
 });
 </script>
