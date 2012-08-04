@@ -14,13 +14,14 @@ group: navigation
 
 {% for category in site.categories %} 
   <div class='{{category[0] | downcase}} hide'>
-  <h2 id='{{ category[0] }}-ref'>{{ category[0] | join: "/" }}</h2>
-  <ul>
+  <h3 class='data-categories' id='{{ category[0] }}-ref'>{{ category[0] | join: "/" }}</h3>
+<ul class='data-categories'>
     {% assign pages_list = category[1] %}  
     {% include ch/data_categories %}
-  </ul>
+</ul>
 </div>
 {% endfor %}
+
 
 <style type='text/css'>
 .hide {
@@ -33,5 +34,6 @@ group: navigation
 
 $(document).ready(function() {
   $('.metadata').toggleClass('hide')
+  $('li:odd').addClass('odd')
 });
 </script>
