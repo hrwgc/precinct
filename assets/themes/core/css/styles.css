@@ -24,6 +24,8 @@ ul.data-categories {
 	
 li.category {
 	list-style: none;
+	padding:10px;
+	border-radius:.2em;
 	
 }
 
