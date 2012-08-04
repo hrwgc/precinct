@@ -7,10 +7,17 @@ api: "herwig.map-j4qvlqyl"
 cols: 
 - precinct
 - totstops
+tags: 
+    - select-data
+marker-color: ""
+marker-size: ""
+marker-symbol: ""
+col-title: [Precinct, Total Stops]
 ---
-{% include ch/gdocs %}
 {% include JB/setup %}
-
-
 <div id='map'></div>
+
+{% include ch/gdocs %}
+{% include ch/mapbox %}
+
 
