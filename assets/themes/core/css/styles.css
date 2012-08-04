@@ -18,11 +18,13 @@ h1,h2,h3,h4,h5,h6{margin:0;font-weight:regular;color:#333333;text-rendering:opti
 	box-shadow: 1px 1px 0px 0px rgba(0,0,0,.3);
 }
 
-.data-categories ul {
+ul.data-categories {
 	list-style: none;
 	}
 	
-.category li {
+li.category {
+	list-style: none;
+	
 }
 
 li.category.odd {
