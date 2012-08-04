@@ -2,33 +2,58 @@ pre code span { font-family: Menlo, Monaco,"Courier New",monospace; }
 pre code { display:block; padding-top: 10px; padding-bottom:10px;  padding-left: 50px; padding-right: 50px; }
 h1,h2,h3,h4,h5,h6{margin:0;font-weight:regular;color:#333333;text-rendering:optimizelegibility;}h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{font-weight:regular;color:#999999;}
 
+ul.tag_box {
+	height:800px;
+}
+.tag_box a {
+	border-radius: .3em;
+	box-shadow: 1px 1px 5px 1px rgba(0,0,0,.4);
+	padding:5px 9px;
+	-webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,.2);
+	   -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,.2);
+	        box-shadow: 0 8px 6px -6px rgba(0,0,0,.2);
+}
+
+.tag_box a:hover {
+	border: 1px solid rgb(27,179,255);
+	color:rgb(27,179,255);
+	
+}
+
+
 .tags_list_ext h2 {
     font-weight:300;
 	text-transform: uppercase;
 	font-size: 12pt;
 	background: #eee;
 	border-radius: .2em;
-	box-shadow: 1px 1px 5px 1px rgba(0,0,0,.4);
+	-webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,.2);
+	   -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,.2);
+	        box-shadow: 0 8px 6px -6px rgba(0,0,0,.2);
 	padding-left:4px;
 	padding-right:4px;
+	margin-bottom:10px;
 }
+
 .tags_list a {
 	border-radius: .2em;
 	text-decoration: none;
-	box-shadow: 1px 1px 0px 0px rgba(0,0,0,.3);
 }
 
-ul.data-categories {
+ul.data-categories, ul.tags_list {
 	list-style: none;
 	}
 	
-li.data-category {
+li.data-category, li.tags_list  {
 	list-style: none;
 	padding:10px;
 	border-radius:.2em;
-	
 }
 
-li.data-category.odd {
+ li.tags_list {
+	margin:20px;
+}
+
+li.data-category .odd, li.tags_list a {
 	background-color:#e3e4e5;
 }

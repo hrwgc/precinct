@@ -21,3 +21,20 @@ group: navigation
    </ul>
   </ul>
 {% endfor %}
+
+<script type='text/javascript' src='{{ASSET_PATH}}/themes/core/js/ext/jquery/jquery-1.7.2.min.js'></script>
+<script type='text/javascript'>
+
+$(document).ready(function() {
+   $('li:odd').addClass('odd');
+    h = 0;
+    w = 0;
+    t = 0;
+  $("ul.tag_box.inline li").each(function(index) {
+         size = parseInt($(this).attr('val'),10);
+         h = size*10;
+         t = size*20;      
+          $(this).css("font-size", t + "pt");
+    });
+});
+</script>
