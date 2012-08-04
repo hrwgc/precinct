@@ -323,8 +323,8 @@ h6.description {
   margin-top:5px;
   }
    #layer-switcher li a.title {
-	font-family:'SourceSansProBlackRegular';
-    font-weight: 600;
+	font-family:''SourceSansProSemiboldRegular'';
+    font-weight: 300;
     padding: 10px 0;
     display: block;
     text-decoration: none;

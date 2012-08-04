@@ -22,13 +22,13 @@ ul.data-categories {
 	list-style: none;
 	}
 	
-li.category {
+li.data-category {
 	list-style: none;
 	padding:10px;
 	border-radius:.2em;
 	
 }
 
-li.category.odd {
+li.data-category.odd {
 	background-color:#e3e4e5;
 }
