@@ -666,7 +666,7 @@ border:1px solid #333;
 }
 .wax-tooltip th {
 	font-size:10pt;
-	font-family:'OpenSansSemiBold';
+	font-family:'SourceSansProBlackRegular';
 	text-align:left;
 	padding:6px;
 	text-transform:uppercase;
@@ -704,7 +704,7 @@ border:1px solid #333;
 .wax-tooltip .stops-stats th,
 .wax-tooltip .outcome-stats th,
 .wax-tooltip .person-stats th {
-  font-family:'OpenSansRegular';
+  font-family:'SourceSansProBlackRegular';
   font-size:10px;
   text-align:left;
 }
@@ -716,7 +716,7 @@ border:1px solid #333;
 .wax-tooltip .stops-stats td,
 .wax-tooltip .outcome-stats td,
 .wax-tooltip .person-stats td {
-  font-family:'OpenSansBold';
+  font-family:'SourceSansProBlackRegular';
   font-size:12pt;
   text-align: right;
 }
@@ -742,14 +742,14 @@ border:1px solid #333;
 
 .wax-tooltip .scale-stat .int-title h3 {
 	font-size:24pt;
-	font-family:OpenSansLight;
+	font-family:SourceSansProLightRegular;
 	display:block;
 }
 .wax-tooltip .scale-stat .int-title span {
 	display:block;
 	font-size:36pt;
 	padding:20px;
-	font-family:OpenSansExtraBold;
+	font-family:SourceSansProBlackRegular;
 	margin-left:80px;
 }
 .wax-tooltip {
@@ -775,5 +775,5 @@ border:1px solid #333;
 	overflow:display;
 	border:transparent;
 	box-shadow:0px;
-	font-family:'OpenSansBold';
+	font-family:'SourceSansProBlackRegular';
 }
