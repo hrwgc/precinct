@@ -9,10 +9,22 @@ h1,h2,h3,h4,h5,h6{margin:0;font-weight:regular;color:#333333;text-rendering:opti
 	background: #eee;
 	border-radius: .2em;
 	box-shadow: 1px 1px 5px 1px rgba(0,0,0,.4);
-	margin: 10px;
+	padding-left:4px;
+	padding-right:4px;
 }
 .tags_list a {
 	border-radius: .2em;
 	text-decoration: none;
 	box-shadow: 1px 1px 0px 0px rgba(0,0,0,.3);
+}
+
+.data-categories ul {
+	list-style: none;
+	}
+	
+.category li {
+}
+
+.category.odd li {
+	background-color:#e3e4e5;
 }
