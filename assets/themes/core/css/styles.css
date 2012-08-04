@@ -25,6 +25,6 @@ h1,h2,h3,h4,h5,h6{margin:0;font-weight:regular;color:#333333;text-rendering:opti
 .category li {
 }
 
-.category .odd li {
+li.category.odd {
 	background-color:#e3e4e5;
 }
