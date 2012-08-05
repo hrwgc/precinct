@@ -11,10 +11,11 @@ CONFIG = {
   'posts' => File.join(SOURCE, "_posts"),
   'dataset' => File.join(SOURCE, "_posts/data"),
   'metadata' => File.join(SOURCE, "_posts/metadata"),
-  'map' => File.join(SOURCE, "layers/maps"),
+  'map' => File.join(SOURCE, "_posts/maps"),
   'post_ext' => "md",
   "data_ext" => "md",
   "metadata_ext" => "md",
+  "map_ext" => "html",
   'theme_package_version' => "0.1.0"
 }
 

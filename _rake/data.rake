@@ -128,7 +128,7 @@ task :map do
   desc = ENV["desc"] || ""
   dataset = ENV["dataset"] || ""
   group = ENV["group"] || ""
-  source = ENV["source"] || "#"
+  source = ENV["source"] || ""
   category = ENV["category"] || "map"
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   tags = tags.gsub('[','').gsub(']','').gsub(/^/,'
@@ -147,13 +147,13 @@ task :map do
     puts "Error - date format must be YYYY-MM-DD, please check you typed it correctly!"
     exit -1
   end
-  filename = File.join(CONFIG['map'], "#{date}-#{slug}.#{CONFIG['post_ext']}")
+  filename = File.join(CONFIG['map'], "#{date}-#{slug}.#{CONFIG['map_ext']}")
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
   g = gdoc
   if g != ""
-      script = "{% include ch/mapox %}
+      script = "{% include ch/mapbox %}
 {% include ch/gdocs %}"
   end
   
@@ -168,10 +168,10 @@ task :map do
     map.puts "gdoc: \"#{gdoc}\""
     map.puts "cols: #{cols}"
     map.puts "col-title: #{ct}"
-    map.puts "marker-color: #{mc}"
-    map.puts "marker-size: #{size}"
-    map.puts "marker-symbol: #{sym}"
-    map.puts "scale: #{scale}"
+    map.puts "marker-color: \"#{mc}\""
+    map.puts "marker-size: \"#{size}\""
+    map.puts "marker-symbol: \"#{sym}\""
+    map.puts "scale: \"#{scale}\""
     map.puts "api:  \"#{api}\""
     map.puts "thumb: \"http://api.tiles.mapbox.com/v3/#{api}/thumb.png\""
     map.puts "embed: \"http://api.tiles.mapbox.com/v3/#{api}.html\""
@@ -182,7 +182,8 @@ task :map do
     map.puts "dataset: #{dataset}"
     map.puts "---"
     map.puts "{% include JB/setup %}"
-    map.puts "<div id='map'> </div>"
+    map.puts ""
+    map.puts "<div id='map'></div>"
     map.puts "#{script}"
   end
 end # task :map

@@ -45,8 +45,10 @@ function mmg_google_docs(id, callback) {
 				{% endif %}
 						+ '<span class="int-value">'
 						+ entry.gsx${{ col }}.$t
-						+ '</span></h3>',
+						+ '</span></h3>'
+						{% if page.scale != true %},{% endif %}
 			{% endfor %}
+			{% if page.scale != true %}
 			{% if page.marker-color == empty %}
 						"marker-color": entry.gsx$color.$t,
 			{% else %}
@@ -62,6 +64,7 @@ function mmg_google_docs(id, callback) {
 			{% else %}
 						"marker-size": "{{ page.marker-size }}"
 			{% endif %}
+		{% endif %}
 					}
 		        };
         for (var y in entry) {
