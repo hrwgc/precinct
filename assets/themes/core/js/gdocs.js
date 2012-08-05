@@ -1,5 +1,4 @@
-<script type="text/javascript">
-
+{% include JB/setup %}
 function mmg_google_docs(id, callback) {
     if (typeof reqwest === "undefined") {
     throw "CSV: reqwest required for mmg_csv_url";
