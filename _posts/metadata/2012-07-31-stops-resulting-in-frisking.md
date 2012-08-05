@@ -5,7 +5,7 @@ description: ""
 category: metadata
 tags: 
    - map code
-   - psql scripts
+   - psql script
 api: "herwig.stop-and-frisk-frisk-stops"
 parents: "[]"
 sql: "herwig.stop-and-frisk-frisk-stops"

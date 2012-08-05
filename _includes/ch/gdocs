@@ -1,6 +1,5 @@
-{% include JB/setup %}
 <script type="text/javascript">
-{% literal %}function mmg_google_docs(id, callback) {
+function mmg_google_docs(id, callback) {
     if (typeof reqwest === "undefined") {
     throw "CSV: reqwest required for mmg_csv_url";
     }
@@ -21,7 +20,7 @@
             coordinates: []
         },
           properties: {
-            title:{% endliteral %}{% for col in page.cols limit:1 %}{% literal %}'<h3 class="int-primary"{% endliteral %}id="{{ col }}-ref"{% literal %}>'{% endliteral %}{% if page.col-title != empty %}{% for title in page.col-title limit:1 %}+ "{{ title }}{% literal %}<span class="int-value">'{% endliteral %}{% endfor %}{% else %}+ "{{ col }}{% literal %}<span class="int-value">'{% endliteral %}{% endif %}+ entry.gsx${{ col }}.$t{% literal %}+ '</span></h3>'{% endliteral %}{% endfor %}{% for col in page.cols offset:1 %}{% literal %}+ '<h3 class="int-primary"{% endliteral %}id="{{ col }}-ref"{% literal %}>'{% endliteral %}{% if page.col-title != empty %}{% for title in page.col-title offset:1 %}+ '{{ title }}{% literal %}<span class="int-value">'{% endliteral %}{% endfor %}{% else %}+ '{{ col }}{% literal %}<span class="int-value">'{% endliteral %}{% endif %}+ entry.gsx${{ col }}.$t{% literal %}+ '</span></h3>',{% endliteral %}{% endfor %}{% if page.marker-color == empty %}"marker-color": entry.gsx$color.$t,{% else %}"marker-color": {{ page.marker-color }},{% endif %}{% if page.marker-symbol == empty %}"marker-symbol": entry.gsx$symbol.$t,{% else %}"marker-symbol": {{ page.marker-symbol }},{% endif %}{% if page.marker-size == empty %}"marker-size": entry.gsx$size.$t{% else %}"marker-size": {{ page.marker-size }}{% endif %}{% literal %}}
+            title:{% for col in page.cols limit:1 %}'<h3 class="int-primary"id="{{ col }}-ref">'{% if page.col-title != empty %}{% for title in page.col-title limit:1 %}+ "{{ title }}<span class="int-value">'{% endfor %}{% else %}+ "{{ col }}<span class="int-value">'{% endif %}+ entry.gsx${{ col }}.$t+ '</span></h3>'{% endfor %}{% for col in page.cols offset:1 %}+ '<h3 class="int-primary"id="{{ col }}-ref">'{% if page.col-title != empty %}{% for title in page.col-title offset:1 %}+ '{{ title }}<span class="int-value">'{% endfor %}{% else %}+ '{{ col }}<span class="int-value">'{% endif %}+ entry.gsx${{ col }}.$t+ '</span></h3>',{% endfor %}{% if page.marker-color == empty %}"marker-color": entry.gsx$color.$t,{% else %}"marker-color": {{ page.marker-color }},{% endif %}{% if page.marker-symbol == empty %}"marker-symbol": entry.gsx$symbol.$t,{% else %}"marker-symbol": {{ page.marker-symbol }},{% endif %}{% if page.marker-size == empty %}"marker-size": entry.gsx$size.$t{% else %}"marker-size": {{ page.marker-size }}{% endif %}}
         };
         for (var y in entry) {
         if (y === latfield) feature.geometry.coordinates[1] = parseFloat(entry[y].$t);
@@ -44,7 +43,7 @@
     error: response
     });
 }
-{% endliteral %}{% if page.scale == "true" %}
+{% if page.scale == "true" %}
 var scale_factory_cache = {};
     function scale_factory(feature) {
     var dim = Math.round(+feature.properties.{{ page.cols[1] }} / 1200);

@@ -5,7 +5,7 @@ description: ""
 category: metadata
 tags: 
    - LGBT
-   - psql statement
+   - psql script
    - tilemill
    - crime codes
 api: "herwig.lgbt-stops"

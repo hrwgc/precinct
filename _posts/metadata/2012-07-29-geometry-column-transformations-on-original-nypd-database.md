@@ -4,7 +4,7 @@ title: "Geometry column transformations on original NYPD database"
 description: ""
 category: metadata
 tags: 
-   - psql scripts
+   - psql script
    - data processing
    - new_all
 api: ""

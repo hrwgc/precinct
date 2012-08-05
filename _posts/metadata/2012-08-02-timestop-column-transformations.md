@@ -137,7 +137,7 @@ nyclu=# select datestop from new_all where year = '2005' limit 10;
 
 {% highlight sql %}
 nyclu=# select datestop from new_all where year = '2006' limit 10;
-  datestop  
+  datestop
 ------------
  2006-09-18
  2006-10-07

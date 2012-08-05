@@ -3,7 +3,7 @@ layout: post
 title: "Race Data Tables"
 description: ""
 category: metadata
-tags: [psql scripts, race, data definitions]
+tags: [psql script, race, data definitions]
 api: ""
 parents: ""
 sql: ""
