@@ -1,0 +1,35 @@
+---
+layout: layers
+title: "Total Stops by Precinct, Markers"
+description: ""
+category: map
+tags: 
+   - gdocs
+   - precinct totals
+   - markers
+gdoc: "0Ak-Npi8oYB9PdGozRHhaM2Z5cFExTnh4dXNkZ05ZT0E"
+cols: 
+   - precinct
+   - totstops
+col-title: 
+   - Precinct
+   - Total Stops
+marker-color: "#00ffff"
+marker-size: ""
+marker-symbol: "circle"
+scale: ""
+api:  "herwig.map-j4qvlqyl"
+base: "herwig.map-sc0wx5or,"
+thumb: "http://api.tiles.mapbox.com/v3/herwig.map-j4qvlqyl/thumb.png"
+embed: "http://api.tiles.mapbox.com/v3/herwig.map-j4qvlqyl.html"
+group: 
+sql: 
+shp: 
+source: ""
+dataset: 
+---
+{% include JB/setup %}
+
+<div id='map'></div>
+{% include ch/mapbox %}
+{% include ch/gdocs %}

@@ -9,8 +9,14 @@ group: navigation
 {% for post in posts_collate %}
 {% if post.category == "map" %}
 	{% if post.api != empty %}
-<div class="view view-first">
+	{% if post.gdoc != empty %}
+	<div class="view view-first">
+		{% if post.scale != true %}
+		<img src="http://api.tiles.mapbox.com/v3/{{ post.base }}/pin-l-circle+00ffff(-73.9500,40.7142)/-73.9500,40.7142,12/270x300.png" alt="{{ post.title }}" />
+{% else %}
 	<img src="http://api.tiles.mapbox.com/v3/{{ post.base }}{{ post.api }}/-73.9500,40.7142,12/270x300.png" alt="{{ post.title }}" />
+	{% endif %}
+	{% endif %}
 	<div class="mask">
 		<h2>{{ post.title }}</h2>
 	<p>{{ post.description }}</p>
