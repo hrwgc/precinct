@@ -24,11 +24,7 @@ sql:
 shp: 
 dataset: 
 ---
-
 {% include JB/setup %}
-<div id='map'> </div>
-<script type="text/javascript" src="http://api.tiles.mapbox.com/mapbox.js/v0.6.3/mapbox.js"> </script>
-<link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.3/mapbox.css' type='text/css' rel='stylesheet' media="all" />
 <div id='map'></div>
 <script type="text/javascript" src="http://api.tiles.mapbox.com/mapbox.js/v0.6.3/mapbox.js"> </script>
 <link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.3/mapbox.css' type='text/css' rel='stylesheet' media="all" />
