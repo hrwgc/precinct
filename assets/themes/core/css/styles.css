@@ -96,17 +96,15 @@ div.map-thumb {
 	}
 	.view h2 {
 	    color: #f5f5f5;
-		font-family: SourceSansProRegular;
 	    text-align: center;
 	    position: relative;
 	    font-size: 18px;
 	    padding: 10px;
-	    background: rgba(3, 3, 3, 0.8);
 	    margin: 20px 0 0 0
 	}
 	.view p {
 	    font-family: SourceSansProItalic;
-		font-weight:300;
+		font-weight:200;
 	    font-size: 14px;
 	    position: relative;
 	    color: #fff;
@@ -135,7 +133,7 @@ div.map-thumb {
 	}
 	.view-first .mask {
 	    opacity: 0;
-	    background-color: rgba(0,255,42, 0.7); 
+	    background-color: rgba(10,10,10, 0.7); 
 	    transition: all 0.4s ease-in-out;
 	}
 	.view-first h2 {
