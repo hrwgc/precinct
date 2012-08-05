@@ -26,7 +26,7 @@ Usage:
     {% endfor %}
   {% else %}
     {% for tag in tags_list %} 
-    	<li val="{{ tag[1].size }}"><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }} <span class='size'>{{ tag[1].size }}</span></a></li>
+    	<li val="{{ tag[1].size }}"><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag[0] | replace: ' ', '-' }}-ref">{{ tag[0] }} <span class='size'>{{ tag[1].size }}</span></a></li>
     {% endfor %}
   {% endif %}
 {% endif %}
