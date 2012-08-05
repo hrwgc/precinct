@@ -67,7 +67,9 @@ div.map-thumb {
 	        box-shadow: 0 8px 6px -6px rgba(0,0,0,.2);
 	margin:10px;
 	float:left;
-}	.view {
+}
+
+	.view {
 	    width: 270px;
 	    height: 250px;
 	    margin: 10px;
@@ -137,6 +139,9 @@ div.map-thumb {
 	    opacity: 0;
 	    background-color: rgba(10,10,10, 0.7); 
 	    transition: all 0.4s ease-in-out;
+	}
+	div.view .odd  {
+		background-color:#eees;
 	}
 	.view-first h2 {
 	    transform: translateY(-100px);
