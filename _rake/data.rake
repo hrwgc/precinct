@@ -179,7 +179,7 @@ task :map do
     map.puts "marker-symbol: \"#{sym}\""
     map.puts "scale: \"#{scale}\""
     map.puts "api:  \"#{api}\""
-    map.puts "base: \"#{base}"
+    map.puts "base: \"#{base}\""
     map.puts "thumb: \"http://api.tiles.mapbox.com/v3/#{api}/thumb.png\""
     map.puts "embed: \"http://api.tiles.mapbox.com/v3/#{api}.html\""
     map.puts "group: #{group}"
