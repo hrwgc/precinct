@@ -9,13 +9,15 @@ group: navigation
 {% for post in posts_collate %}
 {% if post.category == "map" %}
 	{% if post.api != empty %}
-	{% if post.gdoc != empty %}
 	<div class="view view-first">
-		{% if post.scale != true %}
-		<img src="http://api.tiles.mapbox.com/v3/{{ post.base }}{{ post.api }}/pin-l-circle+00ffff(-73.9500,40.7142)/-73.9500,40.7142,12/270x300.png" alt="{{ post.title }}" />
-{% else %}
+		{% if post.gdoc != empty %}
 	<img src="http://api.tiles.mapbox.com/v3/{{ post.base }}{{ post.api }}/-73.9500,40.7142,12/270x300.png" alt="{{ post.title }}" />
-	{% endif %}
+		{% if post.scale != empty %}
+	<img src="http://api.tiles.mapbox.com/v3/{{ post.base }}{{ post.api }}/pin-l-circle+00ffff(-73.9500,40.7142)/-73.9500,40.7142,12/270x300.png" alt="{{ post.title }}" />
+		{% endif %}
+		{% endif %}
+{% if post.gdoc = empty %}
+<img src="http://api.tiles.mapbox.com/v3/{{ post.base }}{{ post.api }}/-73.9500,40.7142,12/270x300.png" alt="{{ post.title }}" />
 	{% endif %}
 	<div class="mask">
 		<h2>{{ post.title }}</h2>
@@ -23,7 +25,6 @@ group: navigation
 	<a class="info" href="{{ BASE_PATH }}{{ post.url }}">View Map</a>
 	</div>
 	</div>
-{% endif %}
 {% endif %}
 {% endfor %}
 {% assign posts_collate = nil %}
