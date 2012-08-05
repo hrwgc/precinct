@@ -50,17 +50,17 @@ function mmg_google_docs(id, callback) {
 			{% if page.marker-color == empty %}
 						"marker-color": entry.gsx$color.$t,
 			{% else %}
-						"marker-color": {{ page.marker-color }},
+						"marker-color": "{{ page.marker-color }}",
 			{% endif %}
 			{% if page.marker-symbol == empty %}
 						"marker-symbol": entry.gsx$symbol.$t,
 			{% else %}
-						"marker-symbol": {{ page.marker-symbol }},
+						"marker-symbol": "{{ page.marker-symbol }}",
 			{% endif %}
 			{% if page.marker-size == empty %}
 						"marker-size": entry.gsx$size.$t
 			{% else %}
-						"marker-size": {{ page.marker-size }}
+						"marker-size": "{{ page.marker-size }}"
 			{% endif %}
 					}
 		        };
@@ -94,8 +94,16 @@ var scale_factory_cache = {};
         c.width = dim;
         c.height = dim;
         var ctx = c.getContext("2d");
+{% if page.marker-color == empty %}
         ctx.fillStyle = "rgba(0, 255, 42, 0.3)";
+{% else %}
+		ctx.fillStyle = "{{ page.marker-color }}";
+{% endif %}
+{% if page.marker-stroke == empty %}
         ctx.strokeStyle = "#000";
+{% else %}
+		ctx.strokeStyle = "{{ page.marker-stroke }}";
+{% endif %}
         ctx.beginPath();
         ctx.arc(dim/2, dim/2, dim/Math.PI, 0, Math.PI*2, true);
         ctx.closePath();

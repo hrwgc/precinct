@@ -131,13 +131,13 @@ task :map do
   source = ENV["source"] || "#"
   category = ENV["category"] || "map"
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
-  tags = tags.gsub(/^/,'
+  tags = tags.gsub('[','').gsub(']','').gsub(/^/,'
    - ').gsub(/[,]{1}[ ]{0,1}/,'
    - ')
-  ct = ct.gsub(/^/,'
+  ct = ct.gsub('[','').gsub(']','').gsub(/^/,'
    - ').gsub(/[,]{1}[ ]{0,1}/,'
    - ')
-  cols = cols.gsub(/^/,'
+  cols = cols.gsub('[','').gsub(']','').gsub(/^/,'
    - ').gsub(/[,]{1}[ ]{0,1}/,'
    - ')
 
@@ -153,8 +153,8 @@ task :map do
   end
   g = gdoc
   if g != ""
-      script = "{% include ch/gdocs %}
-{% include ch/mapbox %}"
+      script = "{% include ch/mapox %}
+{% include ch/gdocs %}"
   end
   
   puts "Creating new map page: #{filename}"
@@ -165,7 +165,7 @@ task :map do
     map.puts "description: \"#{desc}\""
     map.puts "category: #{category}"
     map.puts "tags: #{tags}"
-    map.puts "gdoc: #{gdoc}"
+    map.puts "gdoc: \"#{gdoc}\""
     map.puts "cols: #{cols}"
     map.puts "col-title: #{ct}"
     map.puts "marker-color: #{mc}"
