@@ -1,0 +1,34 @@
+---
+layout: layers
+title: "Precinct Rankings: Plainclothes Stops"
+description: ""
+category: map
+tags: 
+   - no uniform
+   - nypd
+   - precinct stats
+gdoc: ""
+cols: 
+   - id
+   - value
+col-title: 
+   - 
+marker-color: ""
+marker-size: ""
+marker-symbol: "circle"
+scale: ""
+api:  "herwig.stop-and-frisk-no-uniform-precinct"
+base: "herwig.map-j4qvlqyl,
+thumb: "http://api.tiles.mapbox.com/v3/herwig.stop-and-frisk-no-uniform-precinct/thumb.png"
+embed: "http://api.tiles.mapbox.com/v3/herwig.stop-and-frisk-no-uniform-precinct.html"
+group: 
+sql: 
+shp: 
+source: ""
+dataset: 
+---
+{% include JB/setup %}
+
+<div id='map'></div>
+{% include ch/mapbox %}
+{% include ch/map %}

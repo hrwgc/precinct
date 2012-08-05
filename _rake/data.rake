@@ -158,12 +158,11 @@ task :map do
       script = "{% include ch/gdocs %}"
   else script = "{% include ch/map %}"
   end
-  base-map = base
-  if base-map != ""
-      base = "#{base},"
-  else
+  if base == ""
     base = "herwig.map-sc0wx5or,"
-  end
+    else
+          base = "#{base},"
+            end
   puts "Creating new map page: #{filename}"
   open(filename, 'w') do |map|
     map.puts "---"

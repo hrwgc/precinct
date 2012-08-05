@@ -1,0 +1,33 @@
+---
+layout: layers
+title: "Density Contours 2010"
+description: "This layer shows the spatial density of the stops that occurred in 2010."
+category: map
+tags: 
+   - 2010
+   - contours
+gdoc: ""
+cols: 
+   - id
+   - value
+col-title: 
+   - 
+marker-color: ""
+marker-size: ""
+marker-symbol: "circle"
+scale: ""
+api:  "herwig.stop-and-frisk-contours-2010"
+base: "herwig.map-sc0wx5or,
+thumb: "http://api.tiles.mapbox.com/v3/herwig.stop-and-frisk-contours-2010/thumb.png"
+embed: "http://api.tiles.mapbox.com/v3/herwig.stop-and-frisk-contours-2010.html"
+group: 
+sql: 
+shp: 
+source: ""
+dataset: 
+---
+{% include JB/setup %}
+
+<div id='map'></div>
+{% include ch/mapbox %}
+{% include ch/map %}
