@@ -120,8 +120,8 @@ div.map-thumb {
 	font-size: 13pt;
 	font-family: SourceSansProExtraLightItalic;
 	font-weight: normal;
-	background: rgb(238, 238, 238);
-  	color: rgb(27,179,255);
+	background: rgba(27,179,255,.7);
+	color: rgb(238, 238, 238);
 	border-radius: .3em;
 	padding: 10px 20px;
 	-webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,.2);
@@ -129,8 +129,12 @@ div.map-thumb {
 	box-shadow: 0 8px 6px -6px rgba(0,0,0,.2);
 	}
 	.view a.info:hover {
-		border: 1px solid rgb(242,242,242);
-		color:rgb(242,242,242);
+		background: rgba(238, 238, 238,.7);
+		border: 1px solid rgba(242,242,242);
+		color:rgb(27,179,255);
+		-webkit-box-shadow: 0 8px 6px -6px rgba(238,238,238,.2);
+		-moz-box-shadow: 0 8px 6px -6px rgba(238,238,238,.2);
+		box-shadow: 0 8px 6px -6px rgba(238,238,238,.2);
 }
 	.view-first img { 
 	    transition: all 0.2s linear;
