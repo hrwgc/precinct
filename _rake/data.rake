@@ -117,6 +117,7 @@ task :map do
   sql = ENV["sql"] || ""
   csv = ENV["csv"] || ""
   api = ENV["api"] || ""
+  base = ENV["base"] || ""
   scale = ENV["scale"] || ""
   mc = ENV["mc"] || ""
   size = ENV["size"] || ""
@@ -151,12 +152,18 @@ task :map do
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
+  ## removing this temporarily, as gdocs auto filters for when only a rendered map with no markers is called. 
   g = gdoc
   if g != ""
-      script = "{% include ch/mapbox %}
-{% include ch/gdocs %}"
+      script = "{% include ch/gdocs %}"
+  else script = "{% include ch/map %}"
   end
-  
+  base-map = base
+  if base-map != ""
+      base = "#{base},"
+  else
+    base = "herwig.map-sc0wx5or,"
+  end
   puts "Creating new map page: #{filename}"
   open(filename, 'w') do |map|
     map.puts "---"
@@ -173,6 +180,7 @@ task :map do
     map.puts "marker-symbol: \"#{sym}\""
     map.puts "scale: \"#{scale}\""
     map.puts "api:  \"#{api}\""
+    map.puts "base: \"#{base}"
     map.puts "thumb: \"http://api.tiles.mapbox.com/v3/#{api}/thumb.png\""
     map.puts "embed: \"http://api.tiles.mapbox.com/v3/#{api}.html\""
     map.puts "group: #{group}"
@@ -184,6 +192,7 @@ task :map do
     map.puts "{% include JB/setup %}"
     map.puts ""
     map.puts "<div id='map'></div>"
+    map.puts"{% include ch/mapbox %}"
     map.puts "#{script}"
   end
 end # task :map

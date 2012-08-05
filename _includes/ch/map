@@ -1,0 +1,7 @@
+<script type="text/javascript">
+mapbox.load('{{ page.base }},{{ page.api }}', function(o) {
+    var map = mapbox.map('map');
+    map.addLayer(o.layer).zoom(13).center({ lat: 40.7142, lon: -74.0064 });
+    map.interaction.auto();
+});
+</script>
