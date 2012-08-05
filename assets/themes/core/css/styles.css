@@ -68,21 +68,23 @@ div.map-thumb {
 	margin:10px;
 	float:left;
 }	.view {
-	    width: 300px;
-	    height: 200px;
+	    width: 630px;
+	    height: 430px;
 	    margin: 10px;
 	    float: left;
 	    border: 10px solid #fff;
 	    overflow: hidden;
 	    position: relative;
 	    text-align: center;
-	    box-shadow: 1px 1px 2px #e6e6e6;
-	    cursor: default;
-	    background: #fff url(../images/bgimg.jpg) no-repeat center center
-	}
+		background-color:#f5f5f5;
+		border-radius: .2em;
+		-webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,.2);
+		   -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,.2);
+		        box-shadow: 0 8px 6px -6px rgba(0,0,0,.2);
+}
 	.view .mask, .view .content {
-	    width: 300px;
-	    height: 200px;
+	    width: 630px;
+	    height: 430px;
 	    position: absolute;
 	    overflow: hidden;
 	    top: 0;
@@ -103,8 +105,9 @@ div.map-thumb {
 	    margin: 20px 0 0 0
 	}
 	.view p {
-	    font-family: Georgia, serif;
-	    font-style: italic;
+	    font-family: SourceSansProItalic;
+	    font-style: regular;
+		font-weight:200;
 	    font-size: 12px;
 	    position: relative;
 	    color: #fff;
@@ -128,7 +131,7 @@ div.map-thumb {
 	}
 	.view-first .mask {
 	    opacity: 0;
-	    background-color: rgba(219,127,8, 0.7); 
+	    background-color: rgba(0,255,42, 0.7); 
 	    transition: all 0.4s ease-in-out;
 	}
 	.view-first h2 {
@@ -163,3 +166,4 @@ div.map-thumb {
 	.view-first:hover a.info {
 	    transition-delay: 0.2s;
 	}
+	
