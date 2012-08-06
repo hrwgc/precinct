@@ -1,0 +1,91 @@
+div.tags {
+  margin: 0 0 15px;
+  }
+  .label {
+    color: #808080;
+    font-size: 11px;
+    line-height: 18px;
+    }
+
+.browse {
+  padding: 20px 0;
+  }
+form#search {
+  width: 480px;
+  margin: 0 auto 15px;
+  }
+  form#search input {
+    background: white url(../images/sprite.png) no-repeat 445px -15px;
+    padding-right: 40px;
+    width: 423px;
+    font-size: 16px;
+    line-height: 26px;
+    }
+@media only screen and (max-width: 600px) {
+  form#search {
+    width: 100%;
+    }
+  form#search input {
+    background: white;
+    padding-right: 0;
+    width: 98%;
+    padding-left: 2%;
+    }
+  .intro #simple-code,
+  .intro #simple-map {
+    width: 100%;
+    }
+  .masthead h1 {
+    width: 100%;
+    }
+  .masthead ul {
+    float: left;
+    }
+  }
+ul.topics {
+  border: 1px solid #ccc;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.10);
+          box-shadow: 0 0 8px rgba(0,0,0,0.10);
+  }
+  ul.topics li a {
+    display: block;
+    padding: 10px;
+    background: #fff;
+    border-bottom: 1px solid #dedede;
+    border-top: 1px solid #dedede;
+    padding: 15px;
+    margin-top: -1px;
+    min-height: 60px;
+    opacity: 1;
+    text-decoration: none;
+    font-weight: normal;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+    -webkit-transition: all 0.05s linear;
+       -moz-transition: all 0.05s linear;
+         -o-transition: all 0.05s linear;
+            transition: all 0.05s linear;
+    }
+    ul.topics li a:hover {
+      border-color: #b0b0b0;
+      position: relative;
+      -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.15);
+         -moz-box-shadow: 0 0 8px rgba(0,0,0,0.15);
+              box-shadow: 0 0 8px 0 0 rgba(0,0,0,0.15);
+      }
+      ul.topics li a:hover h4 {
+        text-decoration: underline;
+        }
+
+  ul.topics li a .description {
+    color: #404040;
+    }
+
+  #tag-list li {
+    float: left;
+    margin: 0 3px 3px 0;
+    }
