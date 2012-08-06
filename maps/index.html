@@ -10,7 +10,7 @@ group: navigation
 {% if post.category == "map" %}
 	{% if post.api != empty %}	
 	<div class="view view-first">
-		<img src="http://api.tiles.mapbox.com/v3/{{ post.base }}{{ post.api }}/-73.9500,40.7142,12/270x300.png" alt="{{ post.title }}" />
+		<img src="http://api.tiles.mapbox.com/v3/{{ post.base }}{% if post.base != empty %},{% endif %}{{ post.api }}/-73.9500,40.7142,12/270x300.png" alt="{{ post.title }}" />
 	<div class="mask">
 		<h2>{{ post.title }}</h2>
 	<p>{{ post.description }}</p>
