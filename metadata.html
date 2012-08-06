@@ -17,16 +17,13 @@ group: navigation
 						<p class="mask tags">{% for tag in item.tags %}
 						  "{{tag}}" {% unless forloop.last %}, {% endunless %}{% endfor %}
 						</p>
+					</a>
 					</div>
-				</a>
-				</div>
 				
 			<!-- </li> -->
 
 	{% endif %}
 	{% endfor %}
-	<!-- </ul> -->
-	</div>
 	</div>
 	{% assign posts_collate = nil %}
 <script type='text/javascript' src='{{ASSET_PATH}}/themes/core/js/ext/jquery/jquery-1.7.2.min.js'></script>

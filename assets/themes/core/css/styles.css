@@ -269,11 +269,27 @@ ul.metadata li a .description:hover {    text-decoration: none }
 .view.view-first.metadata {
 	height:100px;
 }
-div.metadata a.info h2, div.metadata a.info p { opacity:1; color:#333; text-decoration:none; }
-div.metadata a.info h2, div.metadata a.info p { color:#333; }
+div.metadata a.info h2, div.metadata a.info p {
+	 opacity:1; color:#333;
+	 text-decoration:none;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+     }
+div.metadata a.info h2, div.metadata a.info p { color:#333;
+	-webkit-transform: translateY(0px);
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-moz-transform: translateY(0px);
+	-mox-transform: translateX(0px);
+ 	transform: translateY(0px);
+ 	transform: translateX(0px);
+	opacity:1;    
+    }
 
 
-div.view-first.metadata:hover { background-color: rgba(10,10,10,0.7); }
+div.view.view-first.metadata:hover {
+	 background-color: rgba(10,10,10,0.7); }
 div.metadata a.info h2:hover,
 div.metadata a.info p:hover {
 	 color: rgb(238,238,238);}
