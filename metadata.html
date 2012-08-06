@@ -5,6 +5,8 @@ header: Data processing scripts
 group: navigation
 ---
 {% include JB/setup %}
+<div class="row">
+  <div class="span8">
 <ul class="metadata">
 	{% for post in site.posts %}
 	{% if post.category == "metadata" %}
@@ -18,6 +20,8 @@ group: navigation
 	{% endif %}
 	{% endfor %}
 	</ul>
+	</div>
+	</div>
 	{% assign posts_collate = nil %}
 <script type='text/javascript' src='{{ASSET_PATH}}/themes/core/js/ext/jquery/jquery-1.7.2.min.js'></script>
 <script type='text/javascript'>

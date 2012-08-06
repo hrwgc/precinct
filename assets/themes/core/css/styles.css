@@ -198,7 +198,7 @@ display: block;
 border-bottom: 1px solid #ddd;
 border-top: 1px solid #ddd;
 margin-top: -1px;
-min-height: 60px;
+min-height: 40px;
 -webkit-border-radius: .2em;
 -moz-border-radius: .2em;
 border-radius: .2em;
@@ -211,6 +211,9 @@ text-decoration: none;
    -moz-transition: all 0.05s linear;
      -o-transition: all 0.05s linear;
         transition: all 0.05s linear;
+}
+ul.metadata li a h4 {
+	color:#0088cc;
 }
     ul.metadata li a:hover {
       border-color: #b0b0b0;
@@ -227,3 +230,6 @@ text-decoration: none;
     color: #404040;
     text-decoration:none;
     }
+  ul.metadata li a .description:hover {
+	text-decoration:none;
+}
