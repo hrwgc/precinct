@@ -14,6 +14,8 @@ source: "#"
 data: ""
 ---
 {% include JB/setup %}
+
+### PSQL Statement
 {% highlight psql %}
 
 (select
@@ -25,7 +27,7 @@ data: ""
 
 {% endhighlight %}
 
-
+### Tooltip
 {% highlight html %}
 
 <h3 class='int-title'>Precinct</h3>
@@ -43,9 +45,7 @@ data: ""
 </div>
 
 {% endhighlight %}
-
-
-
+### Carto
 {% highlight css %}
 #pct {
     [zoom < 12] { marker-allow-overlap:false; }

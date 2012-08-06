@@ -7,7 +7,7 @@ tags: [psql script, race, data definitions]
 api: ""
 parents: ""
 sql: ""
-shp: "sample shapefile"
+shp: ""
 source: ""
 ---
 {% include JB/setup %}
