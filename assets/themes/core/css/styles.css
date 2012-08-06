@@ -285,6 +285,9 @@ div.metadata a.info h2, div.metadata a.info p { color:#333;
  	transform: translateY(0px);
  	transform: translateX(0px);
 	opacity:1;    
+	margin: 0;
+	padding: 0;
+	background-color:transparent;
     }
 
 
@@ -292,4 +295,22 @@ div.view.view-first.metadata:hover {
 	 background-color: rgba(10,10,10,0.7); }
 div.metadata a.info h2:hover,
 div.metadata a.info p:hover {
-	 color: rgb(238,238,238);}
+	 color: rgb(238,238,238);
+	-webkit-transition:none;
+	-moz-transition:none;
+	 transition:none;	
+	-webkit-transition-delay:none;
+	-moz-transition-delay:none;
+	 transition-delay:none;
+	}
+	.metadata a.info {
+		opacity:1;
+		background-color:transparent;
+	}
+	.metadata h2.title, .metadata.p {
+		margin:0;
+		text-transform:none;	
+	}
+	.metadata h2.title {
+		line-height:18pt;
+	}
