@@ -265,16 +265,11 @@ ul.metadata li a .description {
     text-decoration: none;
     }
 ul.metadata li a .description:hover {    text-decoration: none }
-.view .tags, 
-.view .title,
-.view .description {
-	padding:0;
-	margin:0;
-}
+
 .view.view-first.metadata {
 	height:100px;
 }
-div.metadata a.info h2, div.metadata a.info p { color:#333; text-decoration:none; }
+div.metadata a.info h2, div.metadata a.info p { opacity:1; color:#333; text-decoration:none; }
 div.metadata a.info h2, div.metadata a.info p { color:#333; }
 
 
