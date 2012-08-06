@@ -167,7 +167,6 @@ h2.view .title { color:  rgba(10,10,10, 0.7); }
     -moz-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 */    }
-div.view .odd {    background-color: #eee }
 .view-first h2 {
     -webkit-transform: translateY(-100px);
     -moz-transform: translateY(-100px);
@@ -177,6 +176,7 @@ div.view .odd {    background-color: #eee }
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 */    }
+
 .view-first p {
     -webkit-transform: translateY(100px);
     -moz-transform: translateY(100px);
@@ -265,3 +265,20 @@ ul.metadata li a .description {
     text-decoration: none;
     }
 ul.metadata li a .description:hover {    text-decoration: none }
+.view .tags, 
+.view .title,
+.view .description {
+	padding:0;
+	margin:0;
+}
+.view.view-first.metadata {
+	height:100px;
+}
+div.metadata a.info h2, div.metadata a.info p { color:#333; text-decoration:none; }
+div.metadata a.info h2, div.metadata a.info p { color:#333; }
+
+
+div.view-first.metadata:hover { background-color: rgba(10,10,10,0.7); }
+div.metadata a.info h2:hover,
+div.metadata a.info p:hover {
+	 color: rgb(238,238,238);}
