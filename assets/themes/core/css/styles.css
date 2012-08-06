@@ -306,11 +306,25 @@ div.metadata a.info p:hover {
 	.metadata a.info {
 		opacity:1;
 		background-color:transparent;
+		height:100%;
+		margin:0;
+		width:100%;
+		padding:0;
 	}
 	.metadata h2.title, .metadata.p {
 		margin:0;
+		margin-top:10px;
 		text-transform:none;	
 	}
 	.metadata h2.title {
 		line-height:18pt;
 	}
+	.metadata a.info:hover {
+		-webkit-transition:none;
+		-moz-transition:none;
+		 transition:none;	
+		-webkit-transition-delay:none;
+		-moz-transition-delay:none;
+		 transition-delay:none;
+			}
+	
