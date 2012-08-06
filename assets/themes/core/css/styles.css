@@ -19,8 +19,6 @@ ul.tag_box.cloud {
 	color:rgb(27,179,255);
 	
 }
-
-
 .tags_list_ext h2 {
     font-weight:300;
 	text-transform: uppercase;
@@ -179,4 +177,7 @@ div.map-thumb {
 	.view-first:hover a.info {
 	    transition-delay: 0.2s;
 	}
-	
+#map {
+	min-height: 600px;
+	min-width:100px;
+}	
