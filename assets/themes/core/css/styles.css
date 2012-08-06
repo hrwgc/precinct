@@ -225,4 +225,5 @@ text-decoration: none;
 
   ul.metadata li a .description {
     color: #404040;
+    text-decoration:none;
     }
