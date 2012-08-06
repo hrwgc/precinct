@@ -10,10 +10,10 @@ group: navigation
 	{% for post in site.posts %}
 	{% if post.category == "metadata" %}
 			<!-- <li> -->
-					<div class="view view-first">
+					<div class="view view-first metadata">
 						<a class="info" href="{{ BASE_PATH }}{{ post.url }}">s
 						<h2 class="view title">{{ post.title }}</h2>
-					<div class="mask">
+					<div class="metadata mask">
 						<h2 class="mask tags">{{ post.title }}</h2>
 						<h2 class="mask description">{{ post.description }}</h2>
 						<p class="mask tags">{% for tag in item.tags %}
