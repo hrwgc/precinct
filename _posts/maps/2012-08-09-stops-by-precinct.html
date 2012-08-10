@@ -1,6 +1,6 @@
 ---
 layout: maps
-title: "Total Stops by Precinct"
+title: "stops by precinct"
 description: ""
 category: map
 tags: 
@@ -8,17 +8,17 @@ tags:
 gdoc: "0Ak-Npi8oYB9PdGozRHhaM2Z5cFExTnh4dXNkZ05ZT0E"
 cols: 
    - precinct
-   - totstops
+   - crimsuspcontain
 col-title: 
-   - Precinct
-   - Total Stops
+   - 
 marker-color: ""
 marker-size: ""
 marker-symbol: "circle"
 scale: "true"
-api:  "herwig.map-j4qvlqyl"
-thumb: "http://api.tiles.mapbox.com/v3/herwig.map-j4qvlqyl/thumb.png"
-embed: "http://api.tiles.mapbox.com/v3/herwig.map-j4qvlqyl.html"
+api:  "herwig.map-sc0wx5or"
+base: "herwig.map-sc0wx5or"
+thumb: "http://api.tiles.mapbox.com/v3/herwig.map-sc0wx5or/-73.9500,40.7142,12/270x300.png"
+embed: "http://api.tiles.mapbox.com/v3/herwig.map-sc0wx5or.html"
 group: 
 sql: 
 shp: 
@@ -26,6 +26,7 @@ source: ""
 dataset: 
 ---
 {% include JB/setup %}
+
 <div id='map'></div>
 {% include ch/mapbox %}
 {% include ch/gdocs %}

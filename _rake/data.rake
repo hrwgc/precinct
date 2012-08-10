@@ -124,7 +124,7 @@ task :map do
   sym = ENV["sym"] || "circle"
   gdoc = ENV["gdoc"] || ""
   tags = ENV["tags"] || "[]"
-  cols = ENV["cols"] || "[id, value]"
+  cols = ENV["cols"] || "id, value"
   ct = ENV["ct"] || ""
   desc = ENV["desc"] || ""
   dataset = ENV["dataset"] || ""
@@ -159,14 +159,15 @@ task :map do
   else script = "{% include ch/map %}"
   end
   if base == ""
-    base = "herwig.map-sc0wx5or,"
+    base = "herwig.map-sc0wx5or"
     else
-          base = "#{base},"
+          base = "#{base}"
             end
+
   puts "Creating new map page: #{filename}"
   open(filename, 'w') do |map|
     map.puts "---"
-    map.puts "layout: layers"
+    map.puts "layout: maps"
     map.puts "title: \"#{title.gsub(/-/,' ')}\""
     map.puts "description: \"#{desc}\""
     map.puts "category: #{category}"
@@ -180,7 +181,7 @@ task :map do
     map.puts "scale: \"#{scale}\""
     map.puts "api:  \"#{api}\""
     map.puts "base: \"#{base}\""
-    map.puts "thumb: \"http://api.tiles.mapbox.com/v3/#{api}/thumb.png\""
+    map.puts "thumb: \"http://api.tiles.mapbox.com/v3/#{api}/-73.9500,40.7142,12/270x300.png\"" 
     map.puts "embed: \"http://api.tiles.mapbox.com/v3/#{api}.html\""
     map.puts "group: #{group}"
     map.puts "sql: #{sql}"

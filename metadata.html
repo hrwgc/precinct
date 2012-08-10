@@ -14,8 +14,9 @@ group: navigation
 						<a class="info" href="{{ BASE_PATH }}{{ post.url }}">
 						<h2 class="title">{{ post.title }}</h2>
 						<p class="description">{{ post.description }}</p>
-						<p class="mask tags">{% for tag in item.tags %}
-						  "{{tag}}" {% unless forloop.last %}, {% endunless %}{% endfor %}
+						<p class="mask tags">
+							{% for tag in post.tags %}
+						  <span class="tags">{{ tag }}</span>{% endfor %}
 						</p>
 					</a>
 					</div>

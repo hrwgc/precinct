@@ -288,6 +288,7 @@ div.metadata a.info h2, div.metadata a.info p { color:#333;
 	margin: 0;
 	padding: 0;
 	background-color:transparent;
+	height: auto;
     }
 
 
@@ -327,4 +328,8 @@ div.metadata a.info p:hover {
 		-moz-transition-delay:none;
 		 transition-delay:none;
 			}
+	p.mask.tags:hover {
+		
+	}		
+	
 	
