@@ -291,9 +291,20 @@ div.metadata a.info h2, div.metadata a.info p { color:#333;
 	height: auto;
     }
 
-
+/*
 div.view.view-first.metadata:hover {
 	 background-color: rgba(10,10,10,0.7); }
+*/
+
+	/* except for the metadata pages */
+
+	div.view.view-first.metadata:hover {
+		 background-color: transparent;
+		-webkit-box-shadow: 0 8px 16px -6px rgba(10,10,10,.2);
+		-moz-box-shadow: 0 8px 16px -6px rgba(10,10,10,.2);
+		box-shadow: 0 8px 16px -6px rgba(10,10,10,.2);
+		}
+	
 div.metadata a.info h2:hover,
 div.metadata a.info p:hover {
 	 color: rgb(238,238,238);
@@ -303,6 +314,7 @@ div.metadata a.info p:hover {
 	-webkit-transition-delay:none;
 	-moz-transition-delay:none;
 	 transition-delay:none;
+	opacity:1;
 	}
 	.metadata a.info {
 		opacity:1;
@@ -312,7 +324,13 @@ div.metadata a.info p:hover {
 		width:100%;
 		padding:0;
 	}
+
 	.metadata h2.title, .metadata.p {
+		margin:0;
+		margin-top:10px;
+		text-transform:none;	
+	}
+	.metadata p.mask.tags {
 		margin:0;
 		margin-top:10px;
 		text-transform:none;	
@@ -320,16 +338,26 @@ div.metadata a.info p:hover {
 	.metadata h2.title {
 		line-height:18pt;
 	}
-	.metadata a.info:hover {
+	.metadata a.info p.description:hover,
+	.metadata a.info h2.title:hover {
 		-webkit-transition:none;
 		-moz-transition:none;
 		 transition:none;	
 		-webkit-transition-delay:none;
 		-moz-transition-delay:none;
 		 transition-delay:none;
-			}
-	p.mask.tags:hover {
+	    border: transparent;
+		opacity:0;
+		}
+
+		p.mask.tags,
+		p.mask.tags span.tags {
+			opacity:0;
+		}
 		
+	p.mask.tags:hover {	
+		opacity:1;
+		color:#333;
+		font-size:18pt;
 	}		
-	
 	

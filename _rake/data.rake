@@ -152,7 +152,6 @@ task :map do
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
-  ## removing this temporarily, as gdocs auto filters for when only a rendered map with no markers is called. 
   g = gdoc
   if g != ""
       script = "{% include ch/gdocs %}"
