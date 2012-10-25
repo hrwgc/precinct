@@ -17,7 +17,6 @@ tagline:
 
 Shows density of stops of Black, Latino, and Black Latino individuals in New York City, 2008. Contours based on frequency of stops to a given location. 
 
-
 ------
 
 ## Sections
